@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="_101:war exploded" />
+      <artifact name="LSD-frontend:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -17,6 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -32,6 +35,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\45263\Desktop\Intellij-Projekts\LSD-frontend\src\main\webapp" />
       <recent name="C:\Users\45263\Desktop\ss\_101\src\main\webapp" />
     </key>
   </component>
@@ -148,7 +153,8 @@
       <workItem from="1571749012176" duration="86000" />
       <workItem from="1572249999038" duration="6142000" />
       <workItem from="1572860123230" duration="286000" />
-      <workItem from="1572860542471" duration="155000" />
+      <workItem from="1572860542471" duration="4079000" />
+      <workItem from="1573036803965" duration="7127000" />
     </task>
     <servers />
   </component>

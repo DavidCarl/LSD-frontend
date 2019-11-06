@@ -15,10 +15,8 @@ public class LoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
         try {
-
             String usernameInput = request.getParameter("un");
             String passwordInput = request.getParameter("pw");
-
             if (usernameInput != null && usernameInput.equals("Mo") && passwordInput.equals("123")) {
                 HttpSession session = request.getSession();
                 session.setAttribute("currentSessionUser", usernameInput);
