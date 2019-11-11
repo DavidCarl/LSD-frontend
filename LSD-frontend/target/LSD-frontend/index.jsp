@@ -51,7 +51,7 @@
 
         <div class="w3-col m2">
             <div class="form-group">
-                <label class="fa fa-calendar-o">to: </label>
+                <label class="fa fa-calendar-o">To: </label>
                 <input id="autocompleteto" class="w3-input w3-border" type="text" placeholder="To airport" />
             </div>
         </div>
