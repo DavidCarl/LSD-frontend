@@ -1,7 +1,7 @@
 package com.zee.servlets;
 
 import contract.dto.*;
-import contract.interfaces.RMIInterface ;
+import contract.interfaces.BeanInterface;
 
 import java.util.ArrayList;
 import java.util.Arrays;
