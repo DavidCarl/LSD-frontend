@@ -21,13 +21,24 @@
 
   <repositories>
     <repository>
-      <id>snapshots</id>
-      <name>http://dcarl.me:8081/artifactory/libs-snapshot-local/LargeSystemDevelopment/LargeSystemDevelopment/1.0-SNAPSHOT</name>
-      <url>libs-snapshot-local/LargeSystemDevelopment/LargeSystemDevelopment/1.0-SNAPSHOT/</url>
+      <id>mvn-repo</id>
+      <url>https://github.com/DavidC…/LargeSystemsDevelopment/mvn-repo/
+      </url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
     </repository>
   </repositories>
 
   <dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -51,7 +62,13 @@
     <dependency>
       <groupId>LargeSystemDevelopment</groupId>
       <artifactId>LargeSystemDevelopment</artifactId>
-      <version>1.0-20191111.111103-1</version>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.wildfly</groupId>
+      <artifactId>wildfly-ejb-client-bom</artifactId>
+      <version>18.0.1.Final</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
 
@@ -71,6 +88,15 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ejb-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+            <!-- this is false by default -->
+            <generateClient>true</generateClient>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

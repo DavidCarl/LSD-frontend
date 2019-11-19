@@ -1,11 +1,16 @@
 package com.zee.servlets;
 import contract.dto.*;
-import contract.interfaces.BeanInterface;
 
+
+import javax.annotation.Resource;
+import javax.ejb.SessionContext;
+import javax.ejb.Stateless;
 import java.util.*;
 
-
+@Stateless
 public class Offers implements BeanInterface {
+    @Resource
+    private SessionContext context;
     @Override
     public Collection<FlightOffer> getFlightOffers(Date start, Date end, String depIata, String destIata, boolean oneWay) {
         Flight flight = new Flight(
@@ -74,4 +79,5 @@ public class Offers implements BeanInterface {
     public String whoAmI(String message) {
         return null;
     }
+
 }
