@@ -2,6 +2,8 @@ package com.zee.servlets;
 
 
 
+import contract.interfaces.BeanInterface;
+
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,14 +20,12 @@ public class TestContract {
 
     public void loadProperties(String h, String p) {
         try {
-
-
             System.out.println("h: " + h + " p: " + p);
 
             Properties prop = new Properties();
             prop.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
             prop.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
-            //prop.put(Context.PROVIDER_URL, "http-remoting://127.0.0.1:8080");
+            prop.put(Context.PROVIDER_URL, "http-remoting://dcarl.me:8082"); //backend.dcarl.me
 
             prop.put("jboss.naming.client.ejb.context", false);
 
@@ -38,17 +38,18 @@ public class TestContract {
     public static void main(String a[]) {
 
         try {
-            final String appName = "";
+            final String appName = "https://www.backend.dcarl.me";
             final String moduleName = "spring-ejb-remote";
             final String distinctName = "";
             final String beanName = "Backend";
             final String viewClassName = BeanInterface.class.getName();
             final String toLookup = String.format("ejb:%s/%s/%s/%s!%s", appName, moduleName, distinctName, beanName, viewClassName);
             new TestContract().loadProperties("https://www.backend.dcarl.me", "80");
-            BeanInterface etr = (BeanInterface) ic.lookup("com.EJBTestRemote");
-            System.out.println(etr.whoAmI(""));
+            BeanInterface etr = (BeanInterface) ic.lookup("ejb:/4/ContractBean!contract.interfaces.BeanInterface"); //ejb:/www.backend.me//ContractBean!
+            System.out.println(etr.whoAmI("David"));
 
         } catch (NamingException ex) {
+            System.out.println(ex);
         }
     }
 }
