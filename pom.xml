@@ -53,6 +53,12 @@
       <artifactId>LargeSystemDevelopment</artifactId>
       <version>1.0-20191111.111103-1</version>
     </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>7.0</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>

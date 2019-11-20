@@ -19,17 +19,15 @@ public class LoginServlet extends HttpServlet {
         try {
             String usernameInput = request.getParameter("user");
             String passwordInput = request.getParameter("pw");
-            if (usernameInput != null) {
-                System.out.println("ses");
-                //User user = new User(1,105,usernameInput,passwordInput);
-                System.out.println("med");
-                //System.out.println(user.toString());
-                //HttpSession session = request.getSession();
-                //session.setAttribute("currentSessionUser", user);
-                //System.out.println("who logged in ? :"+session.getAttribute("currentSessionUser"));
+            if (usernameInput != null && passwordInput != null) {
+                // Make method to authorize the actual login once we have connection to backend
+                User user = new User(1, 105, usernameInput, passwordInput);
+                HttpSession session = request.getSession();
+                session.setAttribute("currentSessionUser", user);
+                System.out.println("who logged in: " + session.getAttribute("currentSessionUser"));
                 response.sendRedirect("home.jsp");
             } else {
-                response.sendRedirect("fuckoff.jsp"); //error page
+                response.sendRedirect("errorpage.jsp"); //error page
             }
         } catch (Throwable theException) {
             System.out.println(theException);
