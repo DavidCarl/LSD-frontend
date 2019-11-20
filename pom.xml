@@ -57,7 +57,7 @@
     <dependency>
       <groupId>LargeSystemDevelopment</groupId>
       <artifactId>LargeSystemDevelopment</artifactId>
-      <version>1.0-20191111.111103-1</version>
+      <version>1.0-20191119.121456-1</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly</groupId>
