@@ -15,6 +15,7 @@ public class Offers implements BeanInterface {
 
     @Override
     public contract.dto.User user(contract.dto.User user) {
+//        return new User()
         return null;
     }
 
