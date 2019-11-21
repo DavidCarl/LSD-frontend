@@ -6,6 +6,7 @@ import contract.dto.Flight;
 import contract.dto.FlightOffer;
 import contract.dto.User;
 import contract.interfaces.BeanInterface;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Properties;
@@ -25,7 +26,6 @@ public class TestContract {
     public void loadProperties(String h, String p) {
         try {
             System.out.println("h: " + h + " p: " + p);
-
             Properties prop = new Properties();
             prop.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
             prop.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.remote.client.InitialContextFactory");
