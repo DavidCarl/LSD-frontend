@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import contract.dto.User;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 
 
 @WebServlet("/LoginServlet")
@@ -28,6 +29,7 @@ public class LoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
         try {
+            String page = "errorpage.jsp";
             initialUsers();
             String usernameInput = request.getParameter("user");
             String passwordInput = request.getParameter("pw");
@@ -37,15 +39,22 @@ public class LoginServlet extends HttpServlet {
                         HttpSession session = request.getSession();
                         session.setAttribute("currentSessionUser", users.get(i));
                         System.out.println("who logged in: " + session.getAttribute("currentSessionUser"));
-                        response.sendRedirect("home.jsp");
-                    } else {
-                        response.sendRedirect("errorpage.jsp"); //error page
+                        page = "home.jsp";
+                        break;
+                    }else{
+                        continue;
                     }
-                }
+                }     
             }
-        } catch (Throwable theException) {
-            System.out.println(theException);
+                RequestDispatcher requestDispatcher = request
+                    .getRequestDispatcher(page);
+                    requestDispatcher.forward(request, response);
+        } catch (Exception e) {
+            System.out.println(e.getStackTrace().toString());
         }
+
+
+        
     }
     /*
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
