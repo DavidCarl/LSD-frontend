@@ -1,8 +1,5 @@
 package com.zee.servlets;
 
-import contract.interfaces.BeanInterface;
-
-import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,23 +8,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+import classes.User;
+
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-    /*
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
         try {
-            String usernameInput = request.getParameter("un");
+            String usernameInput = request.getParameter("user");
             String passwordInput = request.getParameter("pw");
-            if (usernameInput != null && usernameInput.equals("Mo") && passwordInput.equals("123")) {
+            if (usernameInput != null && passwordInput != null) {
+                // Make method to authorize the actual login once we have connection to backend
+                User user = new User(1, 105, usernameInput, passwordInput);
                 HttpSession session = request.getSession();
-                session.setAttribute("currentSessionUser", usernameInput);
-                //System.out.println("who logged in ? :"+session.getAttribute("currentSessionUser"));;
-                response.sendRedirect("start.jsp");
+                session.setAttribute("currentSessionUser", user);
+                System.out.println("who logged in: " + session.getAttribute("currentSessionUser"));
+                response.sendRedirect("home.jsp");
             } else {
-                response.sendRedirect("flightDeals.jsp"); //error page
+                response.sendRedirect("errorpage.jsp"); //error page
             }
         } catch (Throwable theException) {
             System.out.println(theException);
@@ -35,15 +35,12 @@ public class LoginServlet extends HttpServlet {
     }
 /*
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         request.setAttribute("servletName", "start.jsp");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("it works m8, can u hear me ");
         out.println("</body></html>");
-
     }
 */
-
 }
