@@ -81,62 +81,70 @@
                     <label><i class="fa fa-male"></i> Children</label>
                     <input name="children" class="w3-input w3-border" type="number" value="0" id="children">
                 </div>
-
-
-
-        </div>
-
-        <div id="formDiv" class="w3-col m12">
-
-        </div>
-    </form>
-                            <div class="w3-col m2"> <label style="opacity:0">empty</label>
-                    <button class="w3-button w3-block w3-black" onClick="createForms()"> Accept criteria</button>
+                <div class="w3-col m2"> <label style="opacity:0">empty</label>
+                    <button type="button" class="w3-button w3-block w3-black" onClick="createForms()"> Accept criteria</button>
                 </div> 
-    <!-- End page content -->
-</div>
-<script>
-    function createForms() {
-        var adults = parseInt(document.getElementById("adults").value)
-        var children = parseInt(document.getElementById("children").value)
-        var totalPassengers = adults + children
-        var formDiv = document.getElementById("formDiv");
-        formDiv.innerHTML = "";
-        for (var i = 0; i < totalPassengers; i++) {
-            var passengerid = "pid" + i
-            var firstnameid = "firstname" + i
-            var lastnameid = "lastname" + i
-            var dobid = "dob" + i
-            
-            formDiv.innerHTML += `<div id="passengerid">` + `<input id="firstnameid" class="w3-input w3-border w3-col m4" type="text" placeholder="Firstname">` +
-                    `<input id="lastnameid" class="w3-input w3-border w3-col m4" type="text" placeholder="Lastname">` +
-                    `<input id="dobid" class="w3-input w3-border w3-col m4" type="text" placeholder="Month/Day/Year">` + `</div>` + `<br>`
-        }
-        formDiv.innerHTML += `<input class="w3-input w3-border w3-col m4" type="text" placeholder="Creditcard or FFNR">` + `<input class="w3-input w3-border w3-col m4" type="number" placeholder="Payment">` + `<button type="submit" form="bookingid"  class="w3-button w3-block w3-black"> Create booking </button>`
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script>
-<script>
-    AirportInput("autocompletefrom");
-    AirportInput("autocompleteto");
-</script>
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function () {
-        $(".date-picker-lsd").datepicker();
-        $("#oneWayChecker").click(function () {
-            var $box = $(this);
-            if ($box.prop("checked")) {
-                $("#depDateContainer").hide();
-            } else {
-                $("#depDateContainer").show();
+
+                <div id="formDiv" class="w3-col m12">
+
+                </div>
+            </form>
+
+            <!-- End page content -->
+        </div>
+        <script>
+            function createForms() {
+                var adults = parseInt(document.getElementById("adults").value)
+                var children = parseInt(document.getElementById("children").value)
+                var totalPassengers = adults + children
+                var formDiv = document.getElementById("formDiv");
+                formDiv.innerHTML = "";
+                for (var i = 0; i < totalPassengers; i++) {
+                    var passengerid = "pid" + i;
+                    var firstnameid = "firstname" + i;
+                    var lastnameid = "lastname" + i;
+                    var dobid = "dob" + i
+                    console.log(passengerid, firstnameid, lastnameid, dobid)
+
+                    formDiv.innerHTML += `<div name=passengerid>
+                                            <input name="firstnameid" class="w3-input w3-border w3-col m4" type="text" placeholder="Firstname">
+                                            <input name="lastnameid" class="w3-input w3-border w3-col m4" type="text" placeholder="Lastname">
+                                            <input name="dobid" class="w3-input w3-border w3-col m4" type="text" placeholder="Month/Day/Year">
+                                          </div>`
+                    document.getElementsByName("firstnameid")[0].setAttribute("name", firstnameid);
+                    document.getElementsByName("lastnameid")[0].setAttribute("name", lastnameid);
+                    document.getElementsByName("dobid")[0].setAttribute("name", dobid);
+                }
+                formDiv.innerHTML += `
+                                        <input name="ffncc" class="w3-input w3-border w3-col m4" type="text" placeholder="Creditcard or FFNR">
+                                         <input name="price" class="w3-input w3-border w3-col m4" type="number" placeholder="Payment">
+                                         <button type="submit" form="bookingid"  class="w3-button w3-block w3-black"> Create booking </button>`
+
             }
-        })
-    })
-</script>
-</body>
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script>
+        <script>
+            AirportInput("autocompletefrom");
+            AirportInput("autocompleteto");
+        </script>
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(".date-picker-lsd").datepicker();
+                $("#oneWayChecker").click(function () {
+                    var $box = $(this);
+                    if ($box.prop("checked")) {
+                        $("#depDateContainer").hide();
+                    } else {
+                        $("#depDateContainer").show();
+                    }
+                })
+            })
+        </script>
+    </body>
 </html>

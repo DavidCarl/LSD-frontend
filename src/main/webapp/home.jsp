@@ -1,3 +1,4 @@
+<%@page import="contract.dto.*"%>
 <!DOCTYPE html>
 <html>
     <title>LSD TRAVEL</title>
@@ -19,6 +20,9 @@
             <a href="schedule.jsp" class="w3-bar-item w3-button w3-mobile">Schedule</a>
         </div>
         <h1>Hello you can now see your bookings ;-)</h1>
+        <div>
+
+        </div>
     </body>
 
 </html>
