@@ -1,4 +1,8 @@
-<%--
+<%@ page import="com.zee.servlets.web.viewmodels.OffersPageVM" %>
+<%@ page import="com.zee.servlets.web.viewmodels.OfferVM" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.DateFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: MoKayed
   Date: 10/28/2019
@@ -31,22 +35,36 @@
 <link rel="stylesheet" href="stylescss.scss">
 <!-- Page content -->
 <div class="w3-content" style="max-width:1532px;">
-
-
     <div class="w3-row-padding w3-padding-16">
-        <div class="w3-third w3-margin-bottom">
-
-            <div class="w3-container w3-white">
-                <h3 class="w3-opacity">  <strong>18:40 - 23:44</strong> SAS </h3>
-                <h6 class="w3-opacity"><strong>Direct</strong>  4t. 05m</h6>
-                <h3 class="w3-opacity">   <strong>10:22 - 15:32</strong> SAS  </h3>
-                <h6 class="w3-opacity"><strong>Direct</strong>  4t. 05m</h6>
-                <p class="w3-large"><h4 style="color: green">200$</h4></h4></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight <i class="fa fa-plane"></i></button>
-            </div>
-        </div>
-
-
+        <h3>heelooo</h3>
+    <% OffersPageVM viewModel = (OffersPageVM) request.getAttribute("viewModel");
+//    out.print("<h6 class=\"w3-opacity\">" + viewModel + "</h6>");
+    for (OfferVM offer : viewModel.getOffers()) {
+        DateFormat dtf = new SimpleDateFormat("HH:MM");
+        Date outLeaveDate = offer.getOutFlights().get(0).getDepDate();
+        Date outArriveDate = offer.getOutFlights().get(offer.getOutFlights().size() - 1).getArrDate();
+        out.print("<div class=\"w3-third w3-margin-bottom\">");
+        out.print("<div class=\"w3-container w3-white\">");
+        out.print("<h3 class=\"w3-opacity\">  <strong>" +
+                dtf.format(outLeaveDate) + " - " + dtf.format(outArriveDate) + "</strong> " +
+                offer.getOutFlights().get(0).getCarrierIata() + " </h3>");
+        out.print("<h6 class=\"w3-opacity\"><strong>Direct</strong>  4t. 05m</h6>");
+        out.print("<h6>Is one way" + offer + "</h6>");
+        if (!offer.isOneWay()) {
+            Date returnLeaveDate = offer.getHomeFlights().get(0).getDepDate();
+            Date returnArriveDate = offer.getHomeFlights().get(offer.getHomeFlights().size() - 1).getArrDate();
+            out.print("<h3 class=\"w3-opacity\">   <strong>" +
+                    dtf.format(returnLeaveDate) + " - " + dtf.format(returnArriveDate) + "</strong> " +
+                    offer.getHomeFlights().get(0).getCarrierIata() + "</h3>");
+            out.print("<h6 class=\"w3-opacity\"><strong>Direct</strong>  4t. 05m</h6>");
+        }
+        out.print("<p class=\"w3-large\"><h4 style=\"color: green\">" +
+                offer.getPrice() + "$</h4></h4></p>");
+        out.print("<button class=\"w3-button w3-block w3-black w3-margin-bottom\">Choose Flight <i class=\"fa fa-plane\"></i></button>");
+        out.print("</div>");
+        out.print("</div>");
+    }
+    %>
 
 
 

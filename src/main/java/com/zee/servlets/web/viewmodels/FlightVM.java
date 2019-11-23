@@ -7,19 +7,19 @@ public class FlightVM {
     private Date depDate;
     private Date arrDate;
     private int planeCapacity;
-    private String planeIata;
+    private String carrierIata;
     private AirportVM depAirport;
     private AirportVM arrAirport;
 
     public FlightVM() {
     }
 
-    public FlightVM(long id, Date depDate, Date arrDate, int planeCapacity, String planeIata, AirportVM depAirport, AirportVM arrAirport) {
+    public FlightVM(long id, Date depDate, Date arrDate, int planeCapacity, String carrierIata, AirportVM depAirport, AirportVM arrAirport) {
         this.id = id;
         this.depDate = depDate;
         this.arrDate = arrDate;
         this.planeCapacity = planeCapacity;
-        this.planeIata = planeIata;
+        this.carrierIata = carrierIata;
         this.depAirport = depAirport;
         this.arrAirport = arrAirport;
     }
@@ -48,11 +48,11 @@ public class FlightVM {
     public void setPlaneCapacity(int planeCapacity) {
         this.planeCapacity = planeCapacity;
     }
-    public String getPlaneIata() {
-        return planeIata;
+    public String getCarrierIata() {
+        return carrierIata;
     }
-    public void setPlaneIata(String planeIata) {
-        this.planeIata = planeIata;
+    public void setCarrierIata(String carrierIata) {
+        this.carrierIata = carrierIata;
     }
     public AirportVM getDepAirport() {
         return depAirport;
@@ -74,7 +74,7 @@ public class FlightVM {
                 ", depDate=" + depDate +
                 ", arrDate=" + arrDate +
                 ", planeCapacity=" + planeCapacity +
-                ", planeIata='" + planeIata + '\'' +
+                ", planeIata='" + carrierIata + '\'' +
                 ", depAirport=" + depAirport +
                 ", arrAirport=" + arrAirport +
                 '}';
