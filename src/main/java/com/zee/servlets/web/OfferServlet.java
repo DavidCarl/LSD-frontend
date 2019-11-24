@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/OfferServlet")
@@ -38,14 +39,15 @@ public class OfferServlet extends HttpServlet {
             String toAirport = request.getParameter("toAirport");
             String departDate = request.getParameter("depDate");
             String returnDate = request.getParameter("retDate");
+            Date depDate = new SimpleDateFormat("MM/dd/yyyy").parse(departDate);
+            Date reDate = new SimpleDateFormat("MM/dd/yyyy").parse(returnDate);
             String adultsNumber = request.getParameter("adultNumber");
-            boolean oneWay= Boolean.parseBoolean(request.getParameter("oneWay"));
-            System.out.println(oneWay);
-            System.out.println(request.getParameter("oneWay"));
+            boolean oneWay= Boolean.parseBoolean(request.getParameter("oneWayVal"));
 
-            System.out.println("asodfkdkf" + fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber );
-            System.out.println(connector.hello("Frontend"));
-            OffersPageVM viewModel = connector.getOffersPageData(testUser, new Date(1000, 02, 2), new Date(2939, 02, 2), fromAiport, toAirport, true);
+            System.out.println("dep"+" "+depDate+" "+"redate"+ " "+ reDate);
+            System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber + " " + oneWay);
+//            System.out.println(connector.hello("Frontend"));
+            OffersPageVM viewModel = connector.getOffersPageData(testUser, depDate, reDate, fromAiport, toAirport, oneWay);
             System.out.println(viewModel.toString());
 
             request.setAttribute("viewModel", viewModel);
