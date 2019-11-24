@@ -28,7 +28,7 @@
 
         <div class="w3-bar w3-white w3-large">
             <a href="home.jsp" class="w3-bar-item w3-button w3-red w3-mobile"> Bookings</a>
-            <a href="createbooking.jsp" class="w3-bar-item w3-button w3-mobile">Create booking</a>
+            <a href="searchFlight.jsp" class="w3-bar-item w3-button w3-mobile">Create booking</a>
             <a href="schedule.jsp" class="w3-bar-item w3-button w3-mobile">Schedule</a>
         </div>
         <form action="PnrLookUpServlet" id="pnrservlet" method="get">

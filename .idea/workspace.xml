@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LSD-frontend:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="61837bfc-63cb-49bb-90ed-e4ee1ba07274" name="Default Changelist" comment="">
+    <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/lib/gson-2.8.6.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/TestBeans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/TestContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/TestContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/TestStatelessEjbRemote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/WEB-INF/classes/META-INF/_101.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/WEB-INF/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/WEB-INF/classes/com/zee/servlets/Servletnew.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/invalidLogin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/101'/start.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/META-INF/LSD-frontend.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/Offers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestBeans.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestContract.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestStatelessEjbRemote.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Airplane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Airport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Booking.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/FFNCCIdenitfier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/FlightOffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/FlightRoute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/PNRIdentifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Passenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/dto/Ticket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/contract/interfaces/BeanInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/jboss-ejb-client.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/lib/LargeSystemDevelopment-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/lib/javaee-api-8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/lib/javax.mail-1.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/stylescss.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestBeans.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestContract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestStatelessEjbRemote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSD-frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchFlight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/EndpointFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/EndpointFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/OfferServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LSD-frontend.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/OfferServlet.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,9 +38,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="cdi.beans_1_1" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,36 +55,41 @@
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1TvSaq3KibCxi9CGSee3l7Nw9Np" />
+  <component name="ProjectId" id="1U14VQWtKQyQe6LC4zN2HgCVMD7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean" />
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zee.servlets.web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\45263\Desktop\LSD-Git\LSD-frontend dev and prod beanch\LSD-frontend\src\main\webapp" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,13 +103,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TestContract" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zee.servlets.TestContract" />
+  <component name="RunManager" selected="JBoss Server.JBoss 18.0.1.Final">
+    <configuration name="DevConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zee.servlets.backendconnector.DevConnector" />
       <module name="LSD-frontend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zee.servlets.*" />
+          <option name="PATTERN" value="com.zee.servlets.backendconnector.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,9 +117,108 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="LSD_FE_PROD" value="0" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.zee.servlets.beantest.Main" />
+      <module name="LSD-frontend" />
+      <option name="PROGRAM_PARAMETERS" value="-Denvironment=dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zee.servlets.beantest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JBoss 18.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="LSD-frontend:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="37921" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="LSD_FE_PROD" />
+          <option name="VALUE" value="0" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="LSD-frontend:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DevConnector" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestContract" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DevConnector" />
       </list>
     </recent_temporary>
   </component>
@@ -136,15 +227,15 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="61837bfc-63cb-49bb-90ed-e4ee1ba07274" name="Default Changelist" comment="" />
-      <created>1574163646149</created>
+      <changelist id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="" />
+      <created>1574510790693</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574163646149</updated>
-      <workItem from="1574163649584" duration="4940000" />
-      <workItem from="1574197976561" duration="5000" />
-      <workItem from="1574284121553" duration="2086000" />
-      <workItem from="1574339152123" duration="2100000" />
+      <updated>1574510790693</updated>
+      <workItem from="1574510793564" duration="25464000" />
+      <workItem from="1574545914198" duration="2375000" />
+      <workItem from="1574581563186" duration="13285000" />
+      <workItem from="1574600919965" duration="4794000" />
     </task>
     <servers />
   </component>
@@ -156,7 +247,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
