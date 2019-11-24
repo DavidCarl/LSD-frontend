@@ -1,4 +1,4 @@
-package com.zee.servlets;
+package com.zee.servlets.web;
 
 import contract.interfaces.BeanInterface;
 

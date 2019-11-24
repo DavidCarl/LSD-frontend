@@ -21,11 +21,13 @@
 </div>
 <link rel="stylesheet" href="stylescss.scss">
 <!-- Page content -->
-    <div class="w3-container w3-margin-top" id="rooms">
-        <h3>LSD-TRAVEL</h3>
-        <p>Welcome to LSD-Travel, e offer the best travel deals in the industry.</p>
-    </div>
-    <input id="oneWayChecker" type="checkbox" name="vehicle1" value="Bike"> One way<br>
+<div class="w3-container w3-margin-top" id="rooms">
+    <h3>LSD-TRAVEL</h3>
+    <p>Welcome to LSD-Travel, e offer the best travel deals in the industry.</p>
+</div>
+<form name="getOffer" method="post" action="OfferServlet" >
+    <input id="oneWayChecker" type="checkbox" name="oneWayBox"> One way<br>
+    <input id="oneWayVal" type="hidden" name="oneWay" value="false">
     <script>
         $(function () {
             console.log("init jq");
@@ -34,20 +36,22 @@
                 console.log("cicked");
                 if ($box.prop("checked", true)) {
                     console.log("checked");
+                    $("#oneWayVal").val("true");
                 } else {
                     console.log("unchecked");
+                    $("#oneWayVal").val("false");
+
                 }
             })
         })
     </script>
-    <form name="getOffer" method="post" action="OfferServlet" >
-        <div class="w3-content" style="max-width:1532px;">
-    <div class="w3-col m2">
-    <div class="form-group">
-        <label class="fa fa-calendar-o">From: </label>
-        <input name ="fromAirport" id="fromAirport" class="w3-input w3-border" type="text" placeholder="From airport" />
-    </div>
-    </div>
+    <div class="w3-content" style="max-width:1532px;">
+        <div class="w3-col m2">
+            <div class="form-group">
+                <label class="fa fa-calendar-o">From: </label>
+                <input name ="fromAirport" id="fromAirport" class="w3-input w3-border" type="text" placeholder="From airport" />
+            </div>
+        </div>
 
         <div class="w3-col m2">
             <div class="form-group">
@@ -73,40 +77,40 @@
         </div>
     </div>
 </form>
-    <div class="w3-row-padding w3-padding-16">
-        <div class="w3-third w3-margin-bottom">
-            <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F755060713%2F960x0.jpg%3Ffit%3Dscale" alt="Norway" style="width:100%">
-            <div class="w3-container w3-white">
-                <h3>Fly to Norway</h3>
-                <h6 class="w3-opacity">From $99</h6>
-                <p>Direct flight</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-            </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-            <img src="https://static.toiimg.com/photo/55832119/.jpg" alt="Copenhagen" style="width:100%">
-            <div class="w3-container w3-white">
-                <h3>Fly to Copenhagen</h3>
-                <h6 class="w3-opacity">From $149</h6>
-                <p>Direct flight</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-            </div>
-        </div>
-
-        <div class="w3-third w3-margin-bottom">
-            <img src="https://media.cntraveler.com/photos/5cf96a9dd9fb41f17ed08435/master/pass/Eiffel%20Tower_GettyImages-1005348968.jpg" alt="Paris" style="width:100%">
-            <div class="w3-container w3-white">
-                <h3>Fly to Paris</h3>
-                <h6 class="w3-opacity">From $199</h6>
-                <p>Direct</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-            </div>
+<div class="w3-row-padding w3-padding-16">
+    <div class="w3-third w3-margin-bottom">
+        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F755060713%2F960x0.jpg%3Ffit%3Dscale" alt="Norway" style="width:100%">
+        <div class="w3-container w3-white">
+            <h3>Fly to Norway</h3>
+            <h6 class="w3-opacity">From $99</h6>
+            <p>Direct flight</p>
+            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
         </div>
     </div>
-    <!-- End page content -->
+    <div class="w3-third w3-margin-bottom">
+        <img src="https://static.toiimg.com/photo/55832119/.jpg" alt="Copenhagen" style="width:100%">
+        <div class="w3-container w3-white">
+            <h3>Fly to Copenhagen</h3>
+            <h6 class="w3-opacity">From $149</h6>
+            <p>Direct flight</p>
+            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
+        </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+        <img src="https://media.cntraveler.com/photos/5cf96a9dd9fb41f17ed08435/master/pass/Eiffel%20Tower_GettyImages-1005348968.jpg" alt="Paris" style="width:100%">
+        <div class="w3-container w3-white">
+            <h3>Fly to Paris</h3>
+            <h6 class="w3-opacity">From $199</h6>
+            <p>Direct</p>
+            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
+        </div>
+    </div>
+</div>
+<!-- End page content -->
 </div>
 
 <!-- Footer -->

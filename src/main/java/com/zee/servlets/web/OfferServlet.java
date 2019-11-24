@@ -2,12 +2,9 @@ package com.zee.servlets.web;
 
 import com.zee.servlets.backendconnector.BackendConnectable;
 import com.zee.servlets.backendconnector.BackendConnector;
-import com.zee.servlets.backendconnector.DevConnector;
 import com.zee.servlets.web.viewmodels.OffersPageVM;
 import com.zee.servlets.web.viewmodels.UserVM;
 
-import javax.annotation.Resource;
-import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
-import java.util.Properties;
 
 @WebServlet("/OfferServlet")
 public class OfferServlet extends HttpServlet {
@@ -43,11 +39,15 @@ public class OfferServlet extends HttpServlet {
             String departDate = request.getParameter("depDate");
             String returnDate = request.getParameter("retDate");
             String adultsNumber = request.getParameter("adultNumber");
-            System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber );
-            System.out.println(connector.hello("Bob"));
+            boolean oneWay= Boolean.parseBoolean(request.getParameter("oneWay"));
+            System.out.println(oneWay);
+            System.out.println(request.getParameter("oneWay"));
+
+            System.out.println("asodfkdkf" + fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber );
+            System.out.println(connector.hello("Frontend"));
             OffersPageVM viewModel = connector.getOffersPageData(testUser, new Date(1000, 02, 2), new Date(2939, 02, 2), fromAiport, toAirport, true);
-            System.out.println("It worked");
             System.out.println(viewModel.toString());
+
             request.setAttribute("viewModel", viewModel);
             request.getRequestDispatcher("flightDeals.jsp").forward(request, response);
             response.sendRedirect("flightDeals.jsp");

@@ -8,33 +8,34 @@
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/dev/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/OfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DTOConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DTOConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DevConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DevConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/ProdConnector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/TestContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DevConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/beantest/BeanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/beantest/IBeanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/beantest/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/beantest/ProdBeanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnectable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnectable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DevConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OfferVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OfferVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestContract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/beantest/BeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/beantest/IBeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/beantest/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/beantest/ProdBeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/OfferServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnectable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnectable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DevConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OfferVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OfferVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestContract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/beantest/BeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/beantest/IBeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/beantest/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/beantest/ProdBeanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/OfferServlet.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +227,7 @@
       <updated>1574510790693</updated>
       <workItem from="1574510793564" duration="25464000" />
       <workItem from="1574545914198" duration="2375000" />
-      <workItem from="1574581563186" duration="10206000" />
+      <workItem from="1574581563186" duration="13285000" />
     </task>
     <servers />
   </component>
@@ -245,16 +246,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
