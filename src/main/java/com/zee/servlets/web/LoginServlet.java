@@ -52,18 +52,5 @@ public class LoginServlet extends HttpServlet {
         } catch (Exception e) {
             System.out.println(e.getStackTrace().toString());
         }
-
-
-        
     }
-    /*
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("servletName", "start.jsp");
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("it works m8, can u hear me ");
-        out.println("</body></html>");
-    }
-     */
 }

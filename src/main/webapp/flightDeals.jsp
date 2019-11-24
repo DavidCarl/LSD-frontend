@@ -29,13 +29,11 @@
 <!-- Navigation Bar -->
 <form  name="getDeals" action="CreateBookingServlet" method="post">
 
-<div class="w3-bar w3-white w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"></i>LSD</a>
-    <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Flights</a>
-    <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Book Now</a>
-</div>
+    <div class="w3-bar w3-white w3-large">
+        <a href="home.jsp" class="w3-bar-item w3-button w3-mobile"> Bookings</a>
+        <a href="searchFlight.jsp" class="w3-bar-item w3-button w3-red w3-mobile">Flight Offers</a>
+    </div>
+
 <link rel="stylesheet" href="stylescss.scss">
 <!-- Page content -->
 <div class="w3-content" style="max-width:1532px;">
@@ -47,12 +45,13 @@
         </script>
 <%--        <input type="hidden" id="viewModel"/>--%>
         <% OffersPageVM viewModel = (OffersPageVM) request.getAttribute("viewModel");
-            HttpSession session = request.getSession();
-            session.setAttribute("offerPrice", offer.getPrice());
+
 //            out.print("<input type=\"h(viewModel)+ "\"/>");
             out.print("<span id='jsonViewModel' style='display:none;'>" + new Gson().toJson(viewModel) + "</span>");
 //            out.print("<h6 class=\"w3-opacity\">" + viewModel + "</h6>");
             for (OfferVM offer : viewModel.getOffers()) {
+                session = request.getSession();
+                session.setAttribute("offerPrice", offer.getPrice());
                 DateFormat dtf = new SimpleDateFormat("HH:MM");
                 FlightVM firstFlightOut = offer.getOutFlights().get(0);
                 FlightVM lastFlightOut = offer.getOutFlights().get(offer.getOutFlights().size() - 1);

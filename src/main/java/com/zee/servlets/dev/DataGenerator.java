@@ -85,4 +85,20 @@ public class DataGenerator {
     public static ArrayList<FlightOffer> genFlightOffersAList(boolean oneWay){
         return new ArrayList<>(Arrays.asList(DataGenerator.genFlightOffers(oneWay)));
     }
+    
+    public static Booking genBooking(){
+        PNRIdentifier pnr = new PNRIdentifier(1);
+        FFNCCIdenitfier ffncc = new FFNCCIdenitfier("2000102323");
+        Passenger passenger = new Passenger("Mikkel", "Hansen", new Date(1995, 06, 30));
+        ArrayList<Ticket> tickets = new ArrayList<>();
+        Flight[] flights = genFlights();
+        Ticket ticket = new Ticket(passenger,flights[0]);
+        tickets.add(ticket);
+        
+        FlightRoute[] flightroute = genFlightRoutes();
+        
+        Booking booking = new Booking(pnr, 2000.00, ffncc, tickets, flightroute[0], flightroute[1]);
+        return booking;
+    }
+    
 }
