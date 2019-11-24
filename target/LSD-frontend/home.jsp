@@ -1,3 +1,4 @@
+<%@page import="com.sun.javafx.scene.layout.region.Margins"%>
 <%@page import="contract.dto.*"%>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,8 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
         <link rel="stylesheet" href="stylescss.scss">
         <link rel="stylesheet" href="owncss.css">
         <style>
@@ -34,28 +37,45 @@
         <form action="PnrLookUpServlet" id="pnrservlet" method="get">
             <div class="w3-margin-top m2">
                 <h3>Search for booking with PNR:</h3>
-                <input name="pnr" class="w3-input w3-border w3-col m4" type="text" placeholder="Type valid PNR"/>
+                <input name="pnr" class="w3-input w3-border w3-col m4" type="number" placeholder="Type valid PNR"/>
                 <button class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>
             </div>
         </form>
-        
+
         <div>
-            <% 
-               session = request.getSession();
-               Object pnr = session.getAttribute("pnr");
-               System.out.println(pnr);
-               if(pnr == null){
-                   
-               }else if (pnr != ""){
-                   out.println("<p>"+pnr+"</p>");
-               }else{
-                  out.println("<p>du er en idiot</p>");
-               }
-              
-               
+            <%
+                session = request.getSession();
+                Booking booking = booking = (Booking) session.getAttribute("booking");
+
+                if (booking == null) {
+                    out.println("<div class='w3-margin-top m2'> <p>Please fill in a PNR that exists</p> </div>");
+                } else {
+                    out.println("<div class='w3-margin-top m2'>");
+                    out.println("<p><strong>PNR: </strong>" + booking.getPnr().getPnr() + "&emsp;&emsp;&emsp; <strong> FFNCC: </strong> " + booking.getFfncc().getFfcc() + "</p>");
+
+                    for (Ticket ticket : booking.getTickets()) {
+                        out.println("<p><strong>Passengers: </strong> </p> <ul>");
+                        out.println("<li>" + ticket.getPassenger().getFirstName() + " " + ticket.getPassenger().getLastName() + "</li>");
+                        out.println("</ul>");
+                    }
+                    FlightRoute flightroute = booking.getFlightRoute();
+                    for (Flight flight : flightroute.getFlights()) {
+                        out.println("<p><strong>Flight: </strong></p> <ul>");
+                        out.println("<li><strong>Airplane: </strong>" + flight.getAirplane().getIata() + "</li>");
+                        out.println("<li><strong>Departure: </strong> " + flight.getDepAirport().getName() + ", " + flight.getDepDate() + "</li>");
+                        out.println("<li><strong>Arrival: </strong>" + flight.getArrAirport().getName() + ", " + flight.getArrDate() + "</li>");
+
+                        out.println("</ul>");
+                    }
+                    out.println("<p><strong>Price: </strong>" + booking.getPrice() + "</p>");
+                    out.println("<form action='PnrLookUpServlet' id='pnrservlet' method='delete' ><button class='w3-button w3-border w3-red'><strong>Cancel booking</strong></button></formm>");
+                    out.println("</div>");
+                }
+
+
             %>
         </div>
-        
+
         <div>
 
         </div>
