@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
 
         
     }
-    /*
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("servletName", "start.jsp");
         response.setContentType("text/html");
@@ -65,5 +65,5 @@ public class LoginServlet extends HttpServlet {
         out.println("it works m8, can u hear me ");
         out.println("</body></html>");
     }
-     */
+     
 }
