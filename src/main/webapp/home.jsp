@@ -26,7 +26,7 @@
 
                 <div class="w3-margin-bottom m5">
                     <div class=" w3-col m1"></div>
-                    <div class="mygif w3-col m10"></div>
+                    <div class="w3-col m10"></div>
 
                     <div class=" w3-col m1"></div>
                 </div>

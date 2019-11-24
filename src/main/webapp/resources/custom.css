@@ -18,8 +18,3 @@ and open the template in the editor.
   width: 100%;
   margin-left: 5%;
 }
-
-.mygif {
-    background-image: url("./image/flight.gif"); 
-    background-repeat:repeat;
-}
