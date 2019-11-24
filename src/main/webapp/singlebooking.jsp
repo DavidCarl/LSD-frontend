@@ -15,6 +15,12 @@
     <body>
         <h1>Hello World!</h1>
         
-        <%= session.getAttribute("booking") %>
+        <% 
+            Booking book = (Booking) session.getAttribute("booking");
+            out.println("<p>"+book.getPnr().getPnr()+"</p>");
+            out.println("<p>"+book.getFfncc().getFfcc()+"</p>");
+            out.println("<p>"+book.getTickets().size()+"</p>");
+            
+        %>
     </body>
 </html>
