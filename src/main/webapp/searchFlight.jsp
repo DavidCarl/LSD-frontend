@@ -26,7 +26,7 @@
     <h3>LSD-TRAVEL</h3>
     <p>Welcome to LSD-Travel, e offer the best travel deals in the industry.</p>
 </div>
-<form name="getOffer" method="post" action="OfferServlet" >
+<form name="getOffer" method="post" action="SearchOfferServlet" >
     <input id="oneWayChecker" type="checkbox" name="oneWayChecker" value="false"> One way<br>
     <input id="oneWayVal" type="hidden" name="oneWayVal" value="false">
     <script>
@@ -67,76 +67,22 @@
             <label><i class="fa fa-calendar-o"></i>Return Date:</label>
             <input class="w3-input w3-border date-picker-lsd" type="text" name="retDate" id="retDate" placeholder="DD MM YYYY">
         </div>
-        <div class="w3-col m2">
-            <label><i class="fa fa-male"></i> Adults</label>
-            <input class="w3-input w3-border" type="number" name="adultNumber" id="adultNumber" placeholder="1">
-        </div>
+<%--        <div class="w3-col m2">--%>
+<%--            <label><i class="fa fa-male"></i> Adults</label>--%>
+<%--            <input class="w3-input w3-border" type="number" name="adultNumber" id="adultNumber" placeholder="1">--%>
+<%--        </div>--%>
 
         <div class="w3-col m2"> <label style="opacity:0">empty</label>
             <button class="w3-button w3-block w3-black" type="submit">Search</button>
         </div>
     </div>
 </form>
-<div class="w3-row-padding w3-padding-16">
-    <div class="w3-third w3-margin-bottom">
-        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F755060713%2F960x0.jpg%3Ffit%3Dscale" alt="Norway" style="width:100%">
-        <div class="w3-container w3-white">
-            <h3>Fly to Norway</h3>
-            <h6 class="w3-opacity">From $99</h6>
-            <p>Direct flight</p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-        </div>
-    </div>
-    <div class="w3-third w3-margin-bottom">
-        <img src="https://static.toiimg.com/photo/55832119/.jpg" alt="Copenhagen" style="width:100%">
-        <div class="w3-container w3-white">
-            <h3>Fly to Copenhagen</h3>
-            <h6 class="w3-opacity">From $149</h6>
-            <p>Direct flight</p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-        </div>
-    </div>
 
-    <div class="w3-third w3-margin-bottom">
-        <img src="https://media.cntraveler.com/photos/5cf96a9dd9fb41f17ed08435/master/pass/Eiffel%20Tower_GettyImages-1005348968.jpg" alt="Paris" style="width:100%">
-        <div class="w3-container w3-white">
-            <h3>Fly to Paris</h3>
-            <h6 class="w3-opacity">From $199</h6>
-            <p>Direct</p>
-            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-            <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Flight</button>
-        </div>
-    </div>
 </div>
 <!-- End page content -->
 </div>
 
-<!-- Footer -->
-<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <h5>Made by:</h5>
 
-    <p>Group 5</p>
-</footer>
-
-<!-- Add Google Maps -->
-<script>
-    function myMap() {
-        myCenter=new google.maps.LatLng(41.878114, -87.629798);
-        var mapOptions= {
-            center:myCenter,
-            zoom:12, scrollwheel: false, draggable: false,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-        var marker = new google.maps.Marker({
-            position: myCenter,
-        });
-        marker.setMap(map);
-    }
-</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script>
 <script>
