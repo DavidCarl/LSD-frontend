@@ -84,9 +84,7 @@
         <script>
             function verify() {
                 var pnr = prompt("Please enter the PNR to cancel:", "");
-                console.log(pnr);
                 var pnrtag = document.getElementById("pnrtag").value;
-                console.log(pnrtag)
                 if (pnr === pnrtag) {
                     document.getElementById("pnrservlet").submit();
                     return true;
