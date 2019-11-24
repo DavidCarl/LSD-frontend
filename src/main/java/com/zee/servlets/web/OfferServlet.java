@@ -1,7 +1,10 @@
-package com.zee.servlets;
+package com.zee.servlets.web;
 
 import com.zee.servlets.backendconnector.BackendConnectable;
+import com.zee.servlets.backendconnector.BackendConnector;
+import com.zee.servlets.backendconnector.DevConnector;
 import com.zee.servlets.web.viewmodels.OffersPageVM;
+import com.zee.servlets.web.viewmodels.UserVM;
 
 import javax.annotation.Resource;
 import javax.ejb.EJB;
@@ -19,8 +22,19 @@ public class OfferServlet extends HttpServlet {
 
     // ejb:/4/ContractBean!contract.interfaces.BeanInterface
     //@EJB//(lookup = "ejb://DevConnector!com.zee.servlets.backendconnector.BackendConnectable")
-    @EJB(name = "DevConnector", beanName = "DevConnector")
+
+//    @EJB(name = "DevConnector", beanName = "DevConnector")
+//    private BackendConnectable connector;
     private BackendConnectable connector;
+    private UserVM testUser = new UserVM(2, 3, "TNT", "secresy");
+
+    public OfferServlet() {
+         connector = new BackendConnector(testUser);
+    }
+
+    public OfferServlet(BackendConnectable connector) {
+        this.connector = connector;
+    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -29,10 +43,9 @@ public class OfferServlet extends HttpServlet {
             String departDate = request.getParameter("depDate");
             String returnDate = request.getParameter("retDate");
             String adultsNumber = request.getParameter("adultNumber");
-            System.out.println("we are her from offer servlet");
             System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber );
             System.out.println(connector.hello("Bob"));
-            OffersPageVM viewModel = connector.getOffersPageData(new Date(1000, 02, 2), new Date(2939, 02, 2), fromAiport, toAirport, true);
+            OffersPageVM viewModel = connector.getOffersPageData(testUser, new Date(1000, 02, 2), new Date(2939, 02, 2), fromAiport, toAirport, true);
             System.out.println("It worked");
             System.out.println(viewModel.toString());
             request.setAttribute("viewModel", viewModel);

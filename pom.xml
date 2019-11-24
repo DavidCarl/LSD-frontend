@@ -78,6 +78,28 @@
       <artifactId>properties-maven-plugin</artifactId>
       <version>1.0.0</version>
     </dependency>
+
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>5.2.1.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>5.2.1.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.2.1.RELEASE</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -161,7 +183,7 @@
 
   <profiles>
     <profile>
-      <id>LSD-Frontend-Dev</id>
+      <id>dev</id>
       <activation>
         <activeByDefault>true</activeByDefault>
 <!--        <property>-->
@@ -170,8 +192,9 @@
 <!--        </property>-->
       </activation>
       <properties>
-        <backend.connector>DevConnector</backend.connector>
-        <build.profile.id>dev</build.profile.id>
+        <spring.profiles.active>dev</spring.profiles.active>
+<!--        <backend.connector>DevConnector</backend.connector>-->
+<!--        <build.profile.id>dev</build.profile.id>-->
       </properties>
     </profile>
   </profiles>

@@ -49,8 +49,8 @@
                 dtf.format(outLeaveDate) + " - " + dtf.format(outArriveDate) + "</strong> " +
                 offer.getOutFlights().get(0).getCarrierIata() + " </h3>");
         out.print("<h6 class=\"w3-opacity\"><strong>Direct</strong>  4t. 05m</h6>");
-        out.print("<h6>Is one way" + offer + "</h6>");
-        if (!offer.isOneWay()) {
+//        out.print("<h6>Is one way" + offer + "</h6>");
+        if (!viewModel.isOneWay()) {
             Date returnLeaveDate = offer.getHomeFlights().get(0).getDepDate();
             Date returnArriveDate = offer.getHomeFlights().get(offer.getHomeFlights().size() - 1).getArrDate();
             out.print("<h3 class=\"w3-opacity\">   <strong>" +

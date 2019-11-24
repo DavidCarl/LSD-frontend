@@ -1,4 +1,4 @@
-package com.zee.servlets;
+package com.zee.servlets.dev;
 
 import contract.dto.*;
 
@@ -67,33 +67,22 @@ public class DataGenerator {
         return routes;
     }
 
-    public static FlightOffer[] genFlightOffers() {
+    public static FlightOffer[] genFlightOffers(boolean oneWay) {
         FlightOffer[] offers = new FlightOffer[4];
         FlightRoute[] routes = genFlightRoutes();
         offers[0] = new FlightOffer(3333.2, false, routes[1], routes[0]);
         System.out.println(offers[0]);
-        offers[1] = new FlightOffer(11341.1, true, routes[2], null);
-        offers[2] = new FlightOffer(123300.2, true, routes[0], null);
+        offers[1] = new FlightOffer(11341.1, true, routes[2], routes[0]);
+        offers[2] = new FlightOffer(123300.2, true, routes[0], routes[2]);
         offers[3] = new FlightOffer(19938.90, false, routes[2], routes[1]);
+        for (FlightOffer o : offers) {
+            o.setOneWay(oneWay);
+            if (oneWay) o.setReturnRoute(null);
+        }
         return offers;
     }
 
-    public static Collection<FlightOffer> genFlightOffersCol(){
-        return new ArrayList<FlightOffer>(Arrays.asList(DataGenerator.genFlightOffers()));
-    }
-
-
-    public static ArrayList<FlightOffer> getOffer(){
-
-
-        return null;
-    }
-
-
-
-    public static void main(String[] args) {
-        FlightOffer gn =  genFlightOffers()[0];
-
-        System.out.println(new ArrayList<Flight>(gn.getOutRoute().getFlights()).get(0).getDepAirport().getName());
+    public static ArrayList<FlightOffer> genFlightOffersAList(boolean oneWay){
+        return new ArrayList<>(Arrays.asList(DataGenerator.genFlightOffers(oneWay)));
     }
 }

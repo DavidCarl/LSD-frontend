@@ -7,43 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/OfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/OfferServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/dev/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/OfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DTOConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DTOConvert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DevConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/DevConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/ProdConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/ProdConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/FlightVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/FlightVM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/OfferVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/OfferVM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/ProdConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flightDeals.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/DataGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/OfferServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/TestContract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnectable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/BackendConnectable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/DevConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/ProdConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/AirportVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/AirportVM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/FlightVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/FlightVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OfferVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OfferVM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OffersPageVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/classes/com/zee/servlets/web/viewmodels/OffersPageVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/LSD-frontend/flightDeals.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LSD-frontend.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/DataGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/OfferServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/TestContract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/DataGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/OfferServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnectable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnectable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DevConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DevConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/ProdConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/AirportVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/AirportVM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/FlightVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/FlightVM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/ProdConnector.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OfferVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OfferVM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OffersPageVM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/viewmodels/OffersPageVM.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="cdi.beans_1_1" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -76,7 +69,19 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zee.servlets.web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -90,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss Server.Unnamed">
+  <component name="RunManager" selected="JBoss Server.JBoss 18.0.1.Final">
     <configuration name="DevConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zee.servlets.backendconnector.DevConnector" />
       <module name="LSD-frontend" />
@@ -104,8 +109,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LSD-frontend/" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="LSD_FE_PROD" value="0" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.zee.servlets.beantest.Main" />
+      <module name="LSD-frontend" />
+      <option name="PROGRAM_PARAMETERS" value="-Denvironment=dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zee.servlets.beantest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JBoss 18.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LSD-frontend:war exploded">
@@ -168,6 +189,11 @@
           <option name="VM_PARAMETERS" value="" />
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="LSD_FE_PROD" />
+          <option name="VALUE" value="0" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +203,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JBoss Server.Unnamed" />
       <item itemvalue="Application.DevConnector" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DevConnector" />
       </list>
     </recent_temporary>
@@ -196,7 +224,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574510790693</updated>
-      <workItem from="1574510793564" duration="23721000" />
+      <workItem from="1574510793564" duration="25464000" />
+      <workItem from="1574545914198" duration="2375000" />
+      <workItem from="1574581563186" duration="10206000" />
     </task>
     <servers />
   </component>
@@ -208,7 +238,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -218,8 +250,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zee/servlets/OfferServlet.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/zee/servlets/web/OfferServlet.java</url>
+          <line>45</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

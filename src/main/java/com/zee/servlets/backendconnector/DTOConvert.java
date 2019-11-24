@@ -3,11 +3,8 @@ package com.zee.servlets.backendconnector;
 import com.zee.servlets.web.viewmodels.AirportVM;
 import com.zee.servlets.web.viewmodels.FlightVM;
 import com.zee.servlets.web.viewmodels.OfferVM;
-import com.zee.servlets.web.viewmodels.OffersPageVM;
-import contract.dto.Airport;
-import contract.dto.Flight;
-import contract.dto.FlightOffer;
-import contract.dto.FlightRoute;
+import com.zee.servlets.web.viewmodels.UserVM;
+import contract.dto.*;
 
 import java.util.ArrayList;
 
@@ -43,6 +40,24 @@ public class DTOConvert {
                 dto.getPrice(),
                 outFlights,
                 returnFlights
+        );
+    }
+
+    public static UserVM toUserVm(User user) {
+        return new UserVM(
+                user.getUserId(),
+                user.getAgencyNumber(),
+                user.getUserName(),
+                user.getPassword()
+        );
+    }
+
+    public static User fromUserVm(UserVM user) {
+        return new User(
+                user.getUserId(),
+                user.getAgencyNumber(),
+                user.getUserName(),
+                user.getPassword()
         );
     }
 }
