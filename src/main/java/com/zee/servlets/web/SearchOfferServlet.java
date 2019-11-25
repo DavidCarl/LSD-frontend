@@ -2,24 +2,28 @@ package com.zee.servlets.web;
 
 import com.zee.servlets.backendconnector.BackendConnectable;
 import com.zee.servlets.backendconnector.BackendConnector;
+import com.zee.servlets.backendconnector.DTOConvert;
 import com.zee.servlets.web.viewmodels.OffersPageVM;
 import com.zee.servlets.web.viewmodels.UserVM;
+import contract.dto.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.HandlesTypes;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/SearchOfferServlet")
 public class SearchOfferServlet extends HttpServlet {
     private BackendConnectable connector;
-    private UserVM testUser = new UserVM(2, 3, "TNT", "secresy");
     public SearchOfferServlet() {
-         connector = new BackendConnector(testUser);
+         connector = new BackendConnector();
     }
     public SearchOfferServlet(BackendConnectable connector) {
         this.connector = connector;
@@ -37,13 +41,18 @@ public class SearchOfferServlet extends HttpServlet {
             boolean oneWay= Boolean.parseBoolean(request.getParameter("oneWayVal"));
             System.out.println("dep"+" "+depDate+" "+"redate"+ " "+ reDate);
             System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber + " " + oneWay);
-            OffersPageVM viewModel = connector.getOffersPageData(testUser, depDate, reDate, fromAiport, toAirport, oneWay);
+            HttpSession session = request.getSession();
+            UserVM user = DTOConvert.toUserVm((User)session.getAttribute("currentSessionUser"));
+            System.out.println("user: " + user);
+            OffersPageVM viewModel = connector.getOffersPageData(user, depDate, reDate, fromAiport, toAirport, oneWay);
             System.out.println(viewModel.toString());
+            session.setAttribute("offerDtos", viewModel.getOfferDtos());
             request.setAttribute("viewModel", viewModel);
             request.getRequestDispatcher("flightDeals.jsp").forward(request, response);
             response.sendRedirect("flightDeals.jsp");
-        } catch (Throwable theException) {
-            System.out.println(theException);
+        } catch (ParseException theException) {
+            response.sendError(400, "Wrong date format");
+            return;
         }
     }
 }

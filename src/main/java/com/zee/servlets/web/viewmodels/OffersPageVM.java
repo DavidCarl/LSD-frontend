@@ -1,5 +1,7 @@
 package com.zee.servlets.web.viewmodels;
 
+import contract.dto.FlightOffer;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -10,17 +12,19 @@ public class OffersPageVM {
     private AirportVM arrAirport;
     private boolean oneWay;
     private ArrayList<OfferVM> offers;
+    private ArrayList<FlightOffer> offerDtos;
 
     public OffersPageVM() {
     }
 
-    public OffersPageVM(Date travelDate, Date homeDate, AirportVM depAirport, AirportVM arrAirport, boolean oneWay, ArrayList<OfferVM> offers) {
+    public OffersPageVM(Date travelDate, Date homeDate, AirportVM depAirport, AirportVM arrAirport, boolean oneWay, ArrayList<OfferVM> offers, ArrayList<FlightOffer> offerDtos) {
         this.travelDate = travelDate;
         this.homeDate = homeDate;
         this.depAirport = depAirport;
         this.arrAirport = arrAirport;
         this.oneWay = oneWay;
         this.offers = offers;
+        this.offerDtos = offerDtos;
     }
 
     public Date getTravelDate() {
@@ -58,6 +62,12 @@ public class OffersPageVM {
     }
     public void setOffers(ArrayList<OfferVM> offers) {
         this.offers = offers;
+    }
+    public ArrayList<FlightOffer> getOfferDtos() {
+        return offerDtos;
+    }
+    public void setOfferDtos(ArrayList<FlightOffer> offerDtos) {
+        this.offerDtos = offerDtos;
     }
 
     @Override

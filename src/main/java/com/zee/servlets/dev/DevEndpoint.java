@@ -10,7 +10,7 @@ import java.util.Date;
 public class DevEndpoint implements BeanInterface {
     @Override
     public User user(User user) {
-        return null;
+        return user;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class DevEndpoint implements BeanInterface {
 
     @Override
     public Booking makeBooking(User user, FlightOffer flightOffer, FFNCCIdenitfier ffnccIdenitfier, Collection<Passenger> collection) {
-        return null;
+        return DataGenerator.genBooking();
     }
 
     @Override
@@ -30,7 +30,7 @@ public class DevEndpoint implements BeanInterface {
 
         if(booking.getPnr().getPnr() == pnrIdentifier.getPnr()){
             return booking;
-        }else{
+        } else{
             return null;
         }
     }

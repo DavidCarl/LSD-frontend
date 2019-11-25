@@ -94,9 +94,7 @@ public class DataGenerator {
         Flight[] flights = genFlights();
         Ticket ticket = new Ticket(passenger,flights[0]);
         tickets.add(ticket);
-        
         FlightRoute[] flightroute = genFlightRoutes();
-        
         Booking booking = new Booking(pnr, 2000.00, ffncc, tickets, flightroute[0], flightroute[1]);
         return booking;
     }

@@ -19,18 +19,18 @@ public class EndpointFactory {
     private final String PROVIDER_URL = "http-remoting://backend.dcarl.me:8082";
     private final String LOOKUP_NAME = "ejb:/4/ContractBean!contract.interfaces.BeanInterface";
 
-    public BeanInterface getEndpoint(UserVM user) {
+    public BeanInterface getEndpoint() {
         Map<String, String> env = System.getenv();
         boolean isProdEnv = env.containsKey(this.ENV_VAL_KEY) && env.get(this.ENV_VAL_KEY).equals("1");
 
         if(isProdEnv) {
             BeanInterface endpoint = this.getProductionEndpoint();
-            String logMsg = "Dev endpoint initialized for " + user;
+            String logMsg = "Prod endpoint initialized";
             System.out.println(logMsg);
             return endpoint;
         }
 
-        String logMsg = "Dev endpoint initialized for " + user;
+        String logMsg = "Dev endpoint initialized";
         System.out.println(logMsg);
         return new DevEndpoint();
     }

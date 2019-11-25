@@ -27,7 +27,7 @@
 </style>
 <body class="w3-light-grey">
 <!-- Navigation Bar -->
-<form  name="getDeals" action="CreateBookingServlet" method="post">
+
 
     <div class="w3-bar w3-white w3-large">
         <a href="home.jsp" class="w3-bar-item w3-button w3-mobile"> Bookings</a>
@@ -49,6 +49,7 @@
 //            out.print("<input type=\"h(viewModel)+ "\"/>");
             out.print("<span id='jsonViewModel' style='display:none;'>" + new Gson().toJson(viewModel) + "</span>");
 //            out.print("<h6 class=\"w3-opacity\">" + viewModel + "</h6>");
+            int offerIndex = 0;
             for (OfferVM offer : viewModel.getOffers()) {
                 session = request.getSession();
                 session.setAttribute("offerPrice", offer.getPrice());
@@ -84,57 +85,94 @@
                 out.print("<p class=\"w3-large\"><h4 style=\"color: green\">" +
                         offer.getPrice() + "$</h4></h4></p>");
                 //out.print("<button class=\"w3-button w3-block w3-black w3-margin-bottom\">Choose Flight <i class=\"fa fa-plane\"></i></button>");
-                out.print(" <button type=\"button\" class=\"w3-button w3-block w3-black w3-margin-bottom deal-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Choose Flight <i class=\"fa fa-plane\"></i></button>");
+                out.print(" <button type=\"submit\" type=\"button\" class=\"w3-button w3-block w3-black w3-margin-bottom deal-btn\" data-toggle=\"modal\" data-target=\"#myModal\">Choose Flight <i class=\"fa fa-plane\"></i></button>");
+                out.print("<input type='hidden' class='offer-index' value='" + offerIndex + "'>");
                 out.print("</div>");
                 out.print("</div>");
-                out.print("<div id=\"myModal\" class=\"modal fade\" role=\"dialog\">");
-                out.print("<div class=\"modal-dialog\">");
-                out.print("<div class=\"modal-content\">");
-                out.print("<div class=\"modal-header\">");
-                out.print("<button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>");
-                out.print("<h4 class=\"modal-title\">Modal Header</h4>");
-                out.print("</div>");
-                out.print("<div class=\"modal-body\">");
-                out.print("<h3>Out Flights</h3>");
-                out.print("<div id='travelFlights'></div>");
+
+                offerIndex++;
+            }
+
+            out.print("<div id=\"myModal\" class=\"modal fade\" role=\"dialog\">");
+            out.print("<div class=\"modal-dialog\">");
+            out.print("<div class=\"modal-content\">");
+            out.print("<div class=\"modal-header\">");
+            out.print("<form  name=\"getDeals\" action=\"CreateBookingServlet\" method=\"post\">");
+            out.print("<button type=\"submit\" type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>");
+            out.print("<h4 class=\"modal-title\">Flight offer</h4>");
+            out.print("</div>");
+            out.print("<div class=\"modal-body\">");
+            out.print("<h3>Out Flights</h3>");
+            out.print("<input type='hidden' id='selectedOfferIndex' name='selectedOfferIndex'>");
+            out.print("<div id='travelFlights'></div>");
 //                out.print("<p>" +   dtf.format(outLeaveDate) + " - " +  offer.getOutFlights().get(0).getCarrierIata()+
 //                        "</p>");
-                out.print("<h3 id='returnFlightsListTitle'>Return flights</h3>");
-                out.print("<div id='returnFlights'></div>");
-                out.print("<label><i class=\"fa fa-male\"></i> Adults</label>");
-                out.print("<input name=\"adults\" class=\"w3-input w3-border\" min=\"0\" type=\"number\" value=\"0\" id=\"adults\">");
-                out.print("<div id='formDiv'></div>");
-                out.print("<input class=\"w3-input w3-border w3-col m4\" type=\"text\" placeholder=\"FFN or creadit card no.\">");
-                out.print("</div>");
-                out.print("<div class=\"modal-footer\">");
-                out.print("<button type=\"button\" class=\"btn btn-default btn-danger float-left\" data-dismiss=\"modal\">Close</button>");
-                out.print("<button type=\"submit\" class=\"btn btn-default btn-success\" >Create booking</button>");
-                out.print("</div>");
-                out.print("</div>");
-                out.print("</div>");
-                out.print("</div>");
-
-
-
-            }
+            out.print("<h3 id='returnFlightsListTitle'>Return flights</h3>");
+            out.print("<div id='returnFlights'></div>");
+            out.print("<label><i class=\"fa fa-male\"></i> Adults</label>");
+            out.print("<input name='adults' class=\"w3-input w3-border\" min=\"0\" type=\"number\" value=\"0\" id=\"adults\">");
+            out.print("<div id='formDiv'></div>");
+            out.print("<input class=\"w3-input w3-border w3-col m4\" id='ffncc' name='ffncc' type=\"text\" placeholder=\"FFN or creadit card no.\">");
+            out.print("</div>");
+            out.print("<div class=\"modal-footer\">");
+            out.print("<button type=\"button\" class=\"btn btn-default btn-danger float-left\" data-dismiss=\"modal\">Close</button>");
+            out.print("<button id='createBooking' type=\"button\" class=\"btn btn-default btn-success\" >Create booking</button>");
+            out.print("</form>");
+            out.print("</div>");
+            out.print("</div>");
+            out.print("</div>");
+            out.print("</div>");
         %>
         <script>
             console.log("withsiodfknskdf");
             $(function () {
                 viewModel = JSON.parse($("#jsonViewModel").text());
 
+                $("#createBooking").click(function () {
+                    // var formData = new FormData();
+                    var formData = {};
+                    // formData.append("offerIndex", $("#selectedOfferIndex").val());
+                    // formData.append("adultNo", $("#adults").val());
+                    // formData.append("ffncc", $("#ffncc").val());
+
+                    formData["offerIndex"] = $("#selectedOfferIndex").val();
+                    formData["adultNo"] = $("#adults").val();
+                    formData["ffncc"] = $("#ffncc").val();
+
+                    $("#formDiv").find(".passenger-info").each(function (i) {
+                        var $info = $(this);
+                        // formData.append("firstname" + i, $info.find(".p-firstname").val());
+                        // formData.append("lastName" + i, $info.find(".p-lastName").val());
+                        // formData.append("dob" + i, $info.find(".p-dob").val());
+
+                        formData["firstname" + i] =$info.find(".p-firstname").val();
+                        formData["lastName" + i] =$info.find(".p-lastName").val();
+                        formData["dob" + i] =$info.find(".p-dob").val();
+                    });
+                    console.log(formData);
+                    $.ajax({
+                        url: "/LSD-frontend/CreateBookingServlet",
+                        method: "POST",
+                        data: formData,
+                        success: function (data) {
+                            window.location.replace("/LSD-frontend/home.jsp");
+                        }
+                    });
+                });
 
 
                 $(".deal-btn").click(function () {
                     var $btn = $(this);
+                    var offerIndex = $btn.closest(".offer-box").find(".offer-index").val();
+                    $("#selectedOfferIndex").val(offerIndex);
                     var offerData = JSON.parse($btn.closest(".offer-box").find(".offer-data").text());
+
                     console.log(offerData);
                     $("#travelFlights").empty();
                     offerData.outFlights.forEach(function (flight, index) {
                         function formatDate(date) {
                             var dd = date.getDate();
                             var mm = date.getMonth() + 1; //January is 0!
-
                             var yyyy = date.getFullYear();
                             if (dd < 10) {
                                 dd = '0' + dd;
@@ -187,7 +225,7 @@
             });
         </script>
         <div id="passengerInfoTemplate" style="display:none;">
-            <div name="passengerid">
+            <div name="passengerid" class="passenger-info">
                 <input class="w3-input w3-border w3-col m4 p-firstname" type="text" placeholder="Firstname">
                 <input class="w3-input w3-border w3-col m4 p-lastname" type="text" placeholder="Lastname">
                 <input class="w3-input w3-border w3-col m4 p-dob" type="text" placeholder="Month/Day/Year">
@@ -244,7 +282,7 @@
     </div>
     <!-- End page content -->
 </div>
-</form>
+
 </div>
 
 

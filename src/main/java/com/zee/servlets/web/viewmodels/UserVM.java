@@ -47,7 +47,6 @@ public class UserVM {
                 "userId=" + userId +
                 ", agencyNumber=" + agencyNumber +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 }

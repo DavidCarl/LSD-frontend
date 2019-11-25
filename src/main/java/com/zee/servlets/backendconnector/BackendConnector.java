@@ -1,8 +1,7 @@
 package com.zee.servlets.backendconnector;
 
 import com.zee.servlets.web.viewmodels.*;
-import contract.dto.FlightOffer;
-import contract.dto.FlightRoute;
+import contract.dto.*;
 import contract.interfaces.BeanInterface;
 
 import java.text.DateFormat;
@@ -14,8 +13,8 @@ public class BackendConnector implements BackendConnectable {
 
     private BeanInterface endpoint;
 
-    public BackendConnector(UserVM user) {
-        this.endpoint = new EndpointFactory().getEndpoint(user);
+    public BackendConnector() {
+        this.endpoint = new EndpointFactory().getEndpoint();
     }
 
     public BackendConnector(BeanInterface endpoint) {
@@ -26,6 +25,16 @@ public class BackendConnector implements BackendConnectable {
     public String hello(String s) {
         String response = endpoint.whoAmI(s);
         return response;
+    }
+
+    @Override
+    public UserVM userLogin(String username, String password, int agencyNumber) {
+        User loginObj = new User();
+        loginObj.setUserName(username);
+        loginObj.setPassword(password);
+        loginObj.setAgencyNumber(agencyNumber);
+        User loggedInUser = endpoint.user(loginObj);
+        return DTOConvert.toUserVm(loggedInUser);
     }
 
     @Override
@@ -45,7 +54,29 @@ public class BackendConnector implements BackendConnectable {
                 depAirport,
                 destAirport,
                 oneWay,
-                offerVms
+                offerVms,
+                new ArrayList<>(offers)
         );
+    }
+
+    @Override
+    public boolean createBooking(UserVM user, FlightOffer flightOffer, String ffncc, ArrayList<Passenger> passengers) {
+        User userDto = DTOConvert.fromUserVm(user);
+        FFNCCIdenitfier ffnccId = new FFNCCIdenitfier(ffncc);
+        Booking booking = endpoint.makeBooking(userDto, flightOffer, ffnccId, passengers);
+        if(booking != null) return true;
+        return false;
+    }
+
+    @Override
+    public boolean cancelBooking(User user, PNRIdentifier pnr) {
+        boolean result = endpoint.cancelBooking(user, pnr);
+        return result;
+    }
+
+    @Override
+    public Booking getBooking(User user, long pnr) {
+        Booking booking = endpoint.getBooking(user, new PNRIdentifier(pnr));
+        return booking;
     }
 }

@@ -1,5 +1,7 @@
 package com.zee.servlets;
 
+import com.zee.servlets.backendconnector.BackendConnectable;
+import com.zee.servlets.backendconnector.BackendConnector;
 import com.zee.servlets.dev.DevEndpoint;
 import contract.dto.Booking;
 import contract.dto.PNRIdentifier;
@@ -16,13 +18,23 @@ import javax.servlet.RequestDispatcher;
 @WebServlet("/PnrLookUpServlet")
 public class PnrLookUpServlet extends HttpServlet {
 
+    private BackendConnectable connector;
+
+    public PnrLookUpServlet() {
+        connector = new BackendConnector();
+    }
+
+    public PnrLookUpServlet(BackendConnectable connector) {
+        this.connector = connector;
+    }
+
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         HttpSession session = request.getSession();
         Booking booking = (Booking) session.getAttribute("booking");
         User user = (User) session.getAttribute("user");
-        DevEndpoint devend = new DevEndpoint();
-        boolean boo = devend.cancelBooking(user, booking.getPnr());
+
+        boolean boo = connector.cancelBooking(user, booking.getPnr());
         session.setAttribute("booking", null);
         
         RequestDispatcher requestDispatcher = request
@@ -33,13 +45,11 @@ public class PnrLookUpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        DevEndpoint devend = new DevEndpoint();
         User user = (User) session.getAttribute("user");
         PNRIdentifier pnr = null;
         try {
             long pnrLong = Long.parseLong(request.getParameter("pnr"));
-            pnr = new PNRIdentifier(pnrLong);
-            Booking booking = devend.getBooking(user, pnr);
+            Booking booking = connector.getBooking(user, pnrLong);
 
             if (booking != null) {
                 session = request.getSession();
