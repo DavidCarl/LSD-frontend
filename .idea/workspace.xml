@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/SearchOfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/SearchOfferServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +235,7 @@
       <workItem from="1574600919965" duration="4794000" />
       <workItem from="1574618213433" duration="12449000" />
       <workItem from="1574631602620" duration="12678000" />
-      <workItem from="1574673840412" duration="5793000" />
+      <workItem from="1574673840412" duration="5981000" />
     </task>
     <servers />
   </component>

@@ -31,11 +31,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: mkdir ~/.m2 && cp ./settings.xml ~/.m2/ && cd ./LSD-frontend && mvn dependency:go-offline
+      - run: mkdir ~/.m2 && cp ./settings.xml ~/.m2/ && cd . && mvn dependency:go-offline
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: cp ./settings.xml ~/.m2/ && cd ./LSD-frontend && mvn integration-test
+      - run: cp ./settings.xml ~/.m2/ && cd . && mvn integration-test
