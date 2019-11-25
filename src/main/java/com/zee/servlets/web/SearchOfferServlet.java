@@ -31,21 +31,25 @@ public class SearchOfferServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String fromAiport = request.getParameter("fromAirport");
+            String fromApIata = fromAiport.substring(0, 3);
+
+            System.out.println(fromAiport);
+            System.out.println(fromApIata);
             String toAirport = request.getParameter("toAirport");
+            String toApIata = toAirport.substring(0, 3);
             String departDate = request.getParameter("depDate");
             String returnDate = request.getParameter("retDate");
             Date depDate = new SimpleDateFormat("MM/dd/yyyy").parse(departDate);
             Date reDate = new SimpleDateFormat("MM/dd/yyyy").parse(returnDate);
-            String adultsNumber = request.getParameter("adultNumber");
             boolean oneWay= Boolean.parseBoolean(request.getParameter("oneWayVal"));
             System.out.println("dep"+" "+depDate+" "+"redate"+ " "+ reDate);
-            System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate+ " "+ adultsNumber + " " + oneWay);
+            System.out.println(fromAiport + " " + toAirport+ " "+ departDate + " " + returnDate + " " + oneWay);
             HttpSession session = request.getSession();
             UserVM user = DTOConvert.toUserVm((User)session.getAttribute("currentSessionUser"));
             System.out.println("user: " + user);
 
             connector = new BackendConnector();
-            OffersPageVM viewModel = connector.getOffersPageData(user, depDate, reDate, fromAiport, toAirport, oneWay);
+            OffersPageVM viewModel = connector.getOffersPageData(user, depDate, reDate, fromApIata, toApIata, oneWay);
             System.out.println(viewModel.toString());
             session.setAttribute("offerDtos", viewModel.getOfferDtos());
             request.setAttribute("viewModel", viewModel);

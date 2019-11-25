@@ -40,11 +40,17 @@ public class BackendConnector implements BackendConnectable {
     @Override
     public OffersPageVM getOffersPageData(UserVM user, Date start, Date end, String depIata, String destIata, boolean oneWay) {
         Collection<FlightOffer> offers = endpoint.getFlightOffers(DTOConvert.fromUserVm(user), start, end, depIata, destIata, oneWay);
+        System.out.println("offers");
+        System.out.println(offers.size());
         ArrayList<OfferVM> offerVms = new ArrayList<>();
         for (FlightOffer offerDto : offers) {
+            System.out.println(offerDto.getPrice());
+            System.out.println(offerDto.getOutRoute().getFlights().size());
+            System.out.println(offerDto.getReturnRoute().getFlights().size());
             offerVms.add(DTOConvert.toOfferVm(offerDto));
         }
         ArrayList<FlightVM> flights = offerVms.get(0).getOutFlights();
+        System.out.println(flights.size());
         AirportVM depAirport = flights.get(0).getDepAirport();
         AirportVM destAirport = flights.get(flights.size() - 1).getArrAirport();
 
