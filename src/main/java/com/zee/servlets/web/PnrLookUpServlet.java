@@ -1,4 +1,4 @@
-package com.zee.servlets;
+package com.zee.servlets.web;
 
 import com.zee.servlets.backendconnector.BackendConnectable;
 import com.zee.servlets.backendconnector.BackendConnector;
@@ -21,7 +21,6 @@ public class PnrLookUpServlet extends HttpServlet {
     private BackendConnectable connector;
 
     public PnrLookUpServlet() {
-        connector = new BackendConnector();
     }
 
     public PnrLookUpServlet(BackendConnectable connector) {
@@ -34,6 +33,7 @@ public class PnrLookUpServlet extends HttpServlet {
         Booking booking = (Booking) session.getAttribute("booking");
         User user = (User) session.getAttribute("user");
 
+        connector = new BackendConnector();
         boolean boo = connector.cancelBooking(user, booking.getPnr());
         session.setAttribute("booking", null);
         
@@ -68,5 +68,4 @@ public class PnrLookUpServlet extends HttpServlet {
                 .getRequestDispatcher("home.jsp");
         requestDispatcher.forward(request, response);
     }
-
 }

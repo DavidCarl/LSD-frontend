@@ -1,13 +1,11 @@
 package com.zee.servlets.backendconnector;
 
-import com.zee.servlets.PnrLookUpServlet;
 import com.zee.servlets.web.viewmodels.OffersPageVM;
 import com.zee.servlets.web.viewmodels.UserVM;
 import contract.dto.*;
 
 import javax.ejb.Local;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 
 @Local

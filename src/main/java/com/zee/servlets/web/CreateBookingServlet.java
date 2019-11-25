@@ -26,7 +26,6 @@ public class CreateBookingServlet extends HttpServlet {
     private BackendConnectable connector;
 
     public CreateBookingServlet() {
-        connector = new BackendConnector();
     }
 
     public CreateBookingServlet(BackendConnectable connector) {
@@ -57,13 +56,10 @@ public class CreateBookingServlet extends HttpServlet {
         }
 
         UserVM user = DTOConvert.toUserVm((User)session.getAttribute("currentSessionUser"));
+
+        connector = new BackendConnector();
         boolean result = connector.createBooking(user, offerDtos.get(offerIndex), ffncc, passengers);
         if(!result) response.sendError(500);
-
-
-
-//        System.out.println("ggggggggggggggggggggggggddddddddddddddddddd"+session.getAttribute("offerPrice"));
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

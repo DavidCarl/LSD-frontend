@@ -25,7 +25,6 @@ public class LoginServlet extends HttpServlet {
     private BackendConnectable connector;
 
     public LoginServlet() {
-        connector = new BackendConnector();
     }
 
     public LoginServlet(BackendConnectable connector) {
@@ -39,26 +38,15 @@ public class LoginServlet extends HttpServlet {
             String page = "errorpage.jsp";
             String usernameInput = request.getParameter("user");
             String passwordInput = request.getParameter("pw");
-            int agencyNumber = Integer.parseInt(request.getParameter("pw"));
+            int agencyNumber = Integer.parseInt(request.getParameter("agency"));
             if (usernameInput != null && passwordInput != null) {
 
+                connector = new BackendConnector();
                 UserVM userVM = connector.userLogin(usernameInput, passwordInput, agencyNumber);
                 HttpSession session = request.getSession();
                 session.setAttribute("currentSessionUser", DTOConvert.fromUserVm(userVM));
                 page = "home.jsp";
                 System.out.println("who logged in: " + session.getAttribute("currentSessionUser"));
-
-//                for (int i = 0; i < users.size(); i++) {
-//                    if (usernameInput.equals(users.get(i).getUserName()) && passwordInput.equals(users.get(i).getPassword())) {
-//                        HttpSession session = request.getSession();
-//                        session.setAttribute("currentSessionUser", users.get(i));
-//                        System.out.println("who logged in: " + session.getAttribute("currentSessionUser"));
-//                        page = "home.jsp";
-//                        break;
-//                    }else{
-//                        continue;
-//                    }
-//                }
             }
                 RequestDispatcher requestDispatcher = request
                     .getRequestDispatcher(page);

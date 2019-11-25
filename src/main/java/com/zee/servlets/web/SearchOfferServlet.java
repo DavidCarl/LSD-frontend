@@ -23,7 +23,6 @@ import java.util.Date;
 public class SearchOfferServlet extends HttpServlet {
     private BackendConnectable connector;
     public SearchOfferServlet() {
-         connector = new BackendConnector();
     }
     public SearchOfferServlet(BackendConnectable connector) {
         this.connector = connector;
@@ -44,6 +43,8 @@ public class SearchOfferServlet extends HttpServlet {
             HttpSession session = request.getSession();
             UserVM user = DTOConvert.toUserVm((User)session.getAttribute("currentSessionUser"));
             System.out.println("user: " + user);
+
+            connector = new BackendConnector();
             OffersPageVM viewModel = connector.getOffersPageData(user, depDate, reDate, fromAiport, toAirport, oneWay);
             System.out.println(viewModel.toString());
             session.setAttribute("offerDtos", viewModel.getOfferDtos());
