@@ -35,6 +35,7 @@
     <div>
         <form action="PnrLookUpServlet" id="pnrservlet" method="get">
             <div class="w3-margin-top m2">
+                <h4 style="visibility:hidden" id="userSession">Hello ${sessionScope.currentSessionUser} </h4>
                 <h3>Search for booking with PNR:</h3>
                 <input name="pnr" class="myinput w3-border" stlye="display: inline" type="number" placeholder="Type valid PNR"/>
                 <button class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>

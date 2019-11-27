@@ -15,10 +15,10 @@
         <!-- Login Form -->
         <form action="LoginServlet" method="post">
             <h2>Please enter your login details</h2>
-            <input type="text" id="login" class="fadeIn second" name="user" placeholder="Username">
+            <input type="text" id="user" class="fadeIn second" name="user" placeholder="Username">
             <input type="password" id="password" class="fadeIn third" name="pw" placeholder="********">
             <input type="number" id="agency" class="fadeIn fourth" name="agency" placeholder="Agency">
-            <input type="submit" class="fadeIn fourth" value="login">
+            <input id="login" type="submit" class="fadeIn fourth" value="login">
         </form>
     </div>
 </div>

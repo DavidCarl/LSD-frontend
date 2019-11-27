@@ -7,8 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/UserVM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/viewmodels/UserVM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/dev/DevEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/dev/DevEndpoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/LoginServlet.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +35,7 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -85,20 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="DevConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zee.servlets.backendconnector.DevConnector" />
-      <module name="LSD-frontend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zee.servlets.backendconnector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.RunCucumberSelenium">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zee.servlets.Main" />
       <module name="LSD-frontend" />
@@ -205,17 +202,67 @@
         </option>
       </method>
     </configuration>
+    <configuration name="RunCucumberSelenium" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSD-frontend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zee.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zee.test" />
+      <option name="MAIN_CLASS_NAME" value="com.zee.test.RunCucumberSelenium" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Teest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSD-frontend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zee.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zee.test" />
+      <option name="MAIN_CLASS_NAME" value="com.zee.test.Teest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Teest.testGoogleSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LSD-frontend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zee.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zee.test" />
+      <option name="MAIN_CLASS_NAME" value="com.zee.test.Teest" />
+      <option name="METHOD_NAME" value="testGoogleSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.DevConnector" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
+      <item itemvalue="JUnit.RunCucumberSelenium" />
+      <item itemvalue="JUnit.Teest.testGoogleSearch" />
+      <item itemvalue="JUnit.Teest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RunCucumberSelenium" />
+        <item itemvalue="JUnit.Teest.testGoogleSearch" />
+        <item itemvalue="JUnit.Teest" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DevConnector" />
       </list>
     </recent_temporary>
   </component>
@@ -236,6 +283,7 @@
       <workItem from="1574618213433" duration="12449000" />
       <workItem from="1574631602620" duration="12678000" />
       <workItem from="1574673840412" duration="5981000" />
+      <workItem from="1574787388498" duration="8865000" />
     </task>
     <servers />
   </component>
