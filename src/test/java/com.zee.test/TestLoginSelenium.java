@@ -26,7 +26,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * @author MoKayed
  */
 
-public class Teest {
+public class TestLoginSelenium {
     WebDriver driver;
     String userName;
     String password;

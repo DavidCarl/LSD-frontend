@@ -7,16 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.zee.test/Teest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.zee.test/Teest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/selenium/logincucumber.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/selenium/logincucumber.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/BackendConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/DTOConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/backendconnector/EndpointFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/dev/DevEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/dev/DevEndpoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zee/servlets/web/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.zee.test/Teest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.zee.test/TestLoginSelenium.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +208,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Teest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLoginSelenium" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSD-frontend" />
       <extension name="coverage">
         <pattern>
@@ -225,13 +217,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.zee.test" />
-      <option name="MAIN_CLASS_NAME" value="com.zee.test.Teest" />
+      <option name="MAIN_CLASS_NAME" value="com.zee.test.TestLoginSelenium" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Teest.testGoogleSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLoginSelenium.testGoogleSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LSD-frontend" />
       <extension name="coverage">
         <pattern>
@@ -240,7 +232,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.zee.test" />
-      <option name="MAIN_CLASS_NAME" value="com.zee.test.Teest" />
+      <option name="MAIN_CLASS_NAME" value="com.zee.test.TestLoginSelenium" />
       <option name="METHOD_NAME" value="testGoogleSearch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -252,14 +244,14 @@
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
       <item itemvalue="JUnit.RunCucumberSelenium" />
-      <item itemvalue="JUnit.Teest.testGoogleSearch" />
-      <item itemvalue="JUnit.Teest" />
+      <item itemvalue="JUnit.TestLoginSelenium.testGoogleSearch" />
+      <item itemvalue="JUnit.TestLoginSelenium" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RunCucumberSelenium" />
-        <item itemvalue="JUnit.Teest.testGoogleSearch" />
-        <item itemvalue="JUnit.Teest" />
+        <item itemvalue="JUnit.TestLoginSelenium.testGoogleSearch" />
+        <item itemvalue="JUnit.TestLoginSelenium" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -283,7 +275,7 @@
       <workItem from="1574631602620" duration="12678000" />
       <workItem from="1574673840412" duration="5981000" />
       <workItem from="1574787388498" duration="8865000" />
-      <workItem from="1575286277042" duration="340000" />
+      <workItem from="1575286277042" duration="810000" />
     </task>
     <servers />
   </component>
