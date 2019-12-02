@@ -1,6 +1,5 @@
 package com.zee.test;
 
-import com.zee.servlets.backendconnector.BackendConnectable;
 import com.zee.servlets.web.viewmodels.UserVM;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,13 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.ParseException;
-import java.util.List;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -30,15 +27,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 
 public class Teest {
-
     WebDriver driver;
     String userName;
     String password;
     int agencyNumber;
     int id;
-    String pageHeader;
-    private BackendConnectable connector;
-
+    String isUser;
 
     @Given("^the user (.*?)$")
     public void getUserName(String userName) throws ParseException {
@@ -82,11 +76,15 @@ public class Teest {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login")));
         WebElement login = driver.findElement(By.id("login"));
-       login.click();
-
-        pageHeader = driver.findElement(By.id("userSession")).getText();
-        System.out.println(pageHeader);
+        login.click();
+        isUser = driver.findElement(By.id("userSession")).getText();
         Thread.sleep(1000);
+    }
+
+    @Then("the session should be (.*?)")
+    public void pageHeader(String header) {
+        assertThat(header, is(isUser));
+        driver.close();
     }
 
 }
