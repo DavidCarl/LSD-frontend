@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -57,11 +59,12 @@ public class Teest {
     public void startWebDriver () throws InterruptedException {
         UserVM userVM =new UserVM(id,agencyNumber,userName, password);
         if (System.getProperty("os.name").startsWith("Linux")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver_78");
+            driver = new ChromeDriver();
         } else if (System.getProperty("os.name").startsWith("Windows")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver.exe");
+            driver = new ChromeDriver();
         }
-        driver = new ChromeDriver();
         driver.get("http://localhost:8080/LSD-frontend/");
         WebDriverWait wait = new WebDriverWait(driver, 120);
 
