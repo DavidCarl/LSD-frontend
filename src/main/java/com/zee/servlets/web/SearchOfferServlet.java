@@ -54,7 +54,6 @@ public class SearchOfferServlet extends HttpServlet {
             session.setAttribute("offerDtos", viewModel.getOfferDtos());
             request.setAttribute("viewModel", viewModel);
             request.getRequestDispatcher("flightDeals.jsp").forward(request, response);
-            response.sendRedirect("flightDeals.jsp");
         } catch (ParseException theException) {
             response.sendError(400, "Wrong date format");
             return;
