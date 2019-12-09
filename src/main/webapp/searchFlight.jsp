@@ -71,7 +71,7 @@
 <%--        </div>--%>
 
         <div class="w3-col m2"> <label style="opacity:0">empty</label>
-            <button class="w3-button w3-block w3-black" type="submit">Search</button>
+            <button class="w3-button w3-block w3-black" type="submit" id="searchFlight">Search</button>
         </div>
     </div>
 </form>

@@ -12,7 +12,7 @@ import java.util.Date;
 public interface BackendConnectable {
     String hello(String s);
     UserVM userLogin(String username, String password, int agencyNumber);
-    OffersPageVM getOffersPageData(UserVM user, Date start, Date end, String depIata, String destIata, boolean oneWay);
+    OffersPageVM getOffersPageData(UserVM user, Date start, Date end, String depIata, String destIata, boolean oneWay) throws UnknownBackendException;
     boolean createBooking(UserVM user, FlightOffer flightOffer, String ffncc, ArrayList<Passenger> passengers);
     boolean cancelBooking(User user, PNRIdentifier pnr);
     Booking getBooking(User user, long pnr);

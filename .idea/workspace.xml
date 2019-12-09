@@ -8,7 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1c106195-7747-4127-8259-040452655c0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.zee.test/Teest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.zee.test/TestLoginSelenium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnectable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/backendconnector/BackendConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/SearchOfferServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zee/servlets/web/SearchOfferServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/searchFlight.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/searchFlight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.zee.test/TestLoginSelenium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.zee.test/TestLoginSelenium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/selenium/logincucumber.feature" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +74,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zee.servlets.web" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zee.servlets.backendconnector" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\45263\Desktop\LSD-Git\LSD-frontend dev and prod beanch\LSD-frontend\src\main\webapp" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -117,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JBoss 18.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="JBoss 18.0.1.Final1" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 18.0.1.Final1" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="LSD-frontend:war exploded">
@@ -242,7 +251,7 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JBoss Server.JBoss 18.0.1.Final" />
+      <item itemvalue="JBoss Server.JBoss 18.0.1.Final1" />
       <item itemvalue="JUnit.RunCucumberSelenium" />
       <item itemvalue="JUnit.TestLoginSelenium.testGoogleSearch" />
       <item itemvalue="JUnit.TestLoginSelenium" />
@@ -275,7 +284,10 @@
       <workItem from="1574631602620" duration="12678000" />
       <workItem from="1574673840412" duration="5981000" />
       <workItem from="1574787388498" duration="8865000" />
-      <workItem from="1575286277042" duration="810000" />
+      <workItem from="1575286277042" duration="1111000" />
+      <workItem from="1575376396349" duration="965000" />
+      <workItem from="1575484901497" duration="6492000" />
+      <workItem from="1575892646512" duration="6300000" />
     </task>
     <servers />
   </component>

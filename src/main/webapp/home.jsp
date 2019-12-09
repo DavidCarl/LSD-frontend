@@ -38,7 +38,7 @@
             <h4  id="userSession">Hello  ${sessionScope.currentSessionUser.getUserName()} UserId: (${sessionScope.currentSessionUser.getUserId()}) </h4>
             <h3>Search for booking with PNR:</h3>
             <input name="pnr" class="myinput w3-border" stlye="display: inline" type="number" placeholder="Type valid PNR"/>
-            <button class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>
+            <button id="searchBooking" class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>
         </div>
     </form>
 
