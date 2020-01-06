@@ -9,6 +9,6 @@ Then the session should be <output>
 
 Examples:
 |user     |password   |agencyNumber     |output                 | 
-|admin    |admin      |62               |Hello admin UserId: (4)|
+|admin    |admin      |62               |Hello admin UserId: (2)|
 
 
