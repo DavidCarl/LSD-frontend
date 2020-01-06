@@ -19,7 +19,7 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       MAVEN_OPTS: -Xmx3200m
-      LSD_FE_PROD: 1
+      LSD_FE_PROD: 0
 
     steps:
       - checkout

@@ -31,7 +31,7 @@ public class PnrLookUpServlet extends HttpServlet {
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         HttpSession session = request.getSession();
         Booking booking = (Booking) session.getAttribute("booking");
-        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute("currentSessionUser");
 
         connector = new BackendConnector();
         boolean boo = connector.cancelBooking(user, booking.getPnr());
@@ -44,11 +44,13 @@ public class PnrLookUpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute("currentSessionUser");
         PNRIdentifier pnr = null;
         try {
             long pnrLong = Long.parseLong(request.getParameter("pnr"));
+            connector = new BackendConnector();
             Booking booking = connector.getBooking(user, pnrLong);
 
             if (booking != null) {
@@ -61,7 +63,6 @@ public class PnrLookUpServlet extends HttpServlet {
         } catch (Exception e) {
             session = request.getSession();
             session.setAttribute("booking", null);
-
         }
 
         RequestDispatcher requestDispatcher = request
