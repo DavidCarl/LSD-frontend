@@ -26,8 +26,8 @@ public class DevEndpoint implements BeanInterface {
 
     @Override
     public Booking getBooking(User user, PNRIdentifier pnrIdentifier) {
+        System.out.println(pnrIdentifier.getPnr());
         Booking booking = DataGenerator.genBooking();
-
         if(booking.getPnr().getPnr() == pnrIdentifier.getPnr()){
             return booking;
         } else{
