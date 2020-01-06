@@ -2,7 +2,7 @@ package com.zee.servlets.web.viewmodels;
 
 public class UserVM {
     private int userId;
-    private int agencyNumber;
+    int agencyNumber;
     String userName;
     String password;
 
