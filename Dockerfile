@@ -7,5 +7,5 @@ RUN mvn clean package
 
 FROM jboss/wildfly
 
-COPY --from=build-env /app/target/4.war /opt/jboss/wildfly/standalone/deployments/4.war
+COPY --from=build-env /app/target/LSD-frontend.war /opt/jboss/wildfly/standalone/deployments/LSD-frontend.war
 EXPOSE 8080
