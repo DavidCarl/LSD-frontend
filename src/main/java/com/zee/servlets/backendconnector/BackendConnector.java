@@ -8,6 +8,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
 
 public class BackendConnector implements BackendConnectable {
 
@@ -38,8 +39,20 @@ public class BackendConnector implements BackendConnectable {
     }
 
     @Override
-    public OffersPageVM getOffersPageData(UserVM user, Date start, Date end, String depIata, String destIata, boolean oneWay) {
+    public OffersPageVM getOffersPageData(UserVM user, Date start, Date end, String depIata, String destIata, boolean oneWay) throws UnknownBackendException {
         Collection<FlightOffer> offers = endpoint.getFlightOffers(DTOConvert.fromUserVm(user), start, end, depIata, destIata, oneWay);
+
+        if (offers == null) throw new UnknownBackendException("Backend returned null");
+        Iterator<FlightOffer> it = offers.iterator();
+        if (it.hasNext()) {
+            FlightOffer dto = it.next();
+            if (dto.getOutRoute().getFlights().size() <= 0)
+                throw new UnknownBackendException("Backend returned offer with no flights");
+        } else {
+            throw new UnknownBackendException("Backend returned 0 offers");
+        }
+        System.out.println("offers");
+        System.out.println(offers.size());
 
         ArrayList<OfferVM> offerVms = new ArrayList<>();
         for (FlightOffer offerDto : offers) {
@@ -47,6 +60,7 @@ public class BackendConnector implements BackendConnectable {
         }
         ArrayList<FlightVM> flights = offerVms.get(0).getOutFlights();
         AirportVM depAirport = flights.get(0).getDepAirport();
+        System.out.println("222222222222222222222"+flights);
         AirportVM destAirport = flights.get(flights.size() - 1).getArrAirport();
 
         return new OffersPageVM(

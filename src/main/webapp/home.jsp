@@ -20,55 +20,56 @@
 
 <body class="w3-light-grey">
 
-    <div class=" m5">
-        <div class=" w3-col m1"></div>
-        <div class="w3-col m10"></div>
+<div class=" m5">
+    <div class=" w3-col m1"></div>
+    <div class="w3-col m10"></div>
 
-        <div class=" w3-col m1"></div>
-    </div>
+    <div class=" w3-col m1"></div>
+</div>
 
-    <div class="w3-bar w3-white w3-large">
-        <a href="home.jsp" class="w3-bar-item w3-button w3-red w3-mobile"> Bookings</a>
-        <a href="searchFlight.jsp" class="w3-bar-item w3-button w3-mobile">Flight Offers</a>
-    </div>
+<div class="w3-bar w3-white w3-large">
+    <a href="home.jsp" class="w3-bar-item w3-button w3-red w3-mobile"> Bookings</a>
+    <a href="searchFlight.jsp" class="w3-bar-item w3-button w3-mobile">Flight Offers</a>
+</div>
 
-    <div>
-        <form action="PnrLookUpServlet" id="pnrservlet" method="get">
-            <div class="w3-margin-top m2">
-                <h3>Search for booking with PNR:</h3>
-                <input name="pnr" class="myinput w3-border" stlye="display: inline" type="number" placeholder="Type valid PNR"/>
-                <button class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>
-            </div>
-        </form>
+<div>
+    <form action="PnrLookUpServlet" id="pnrservlet" method="get">
+        <div class="w3-margin-top m2">
+            <h4  id="userSession">Hello  ${sessionScope.currentSessionUser.getUserName()} UserId: (${sessionScope.currentSessionUser.getUserId()}) </h4>
+            <h3>Search for booking with PNR:</h3>
+            <input name="pnr" class="myinput w3-border" stlye="display: inline" type="number" placeholder="Type valid PNR"/>
+            <button id="searchBooking" class="w3-button w3-border  w3-border-black w3-black" type="Submit">Search</button>
+        </div>
+    </form>
 
-        <%
-            session = request.getSession();
-            Booking booking = booking = (Booking) session.getAttribute("booking");
-            if (booking == null) {
-                out.println("<div class='w3-margin-top m2'> <p>Please fill in a PNR that exists</p> </div>");
-            } else {
-                out.println("<div class='w3-margin-top m2'>");
-                out.println("<input id='pnrtag' type='hidden' value='"+ booking.getPnr().getPnr() +"'/>");
-                out.println("<p ><strong>PNR: </strong>" + booking.getPnr().getPnr() + "</p><p>&emsp;&emsp;&emsp; <strong> FFNCC: </strong> " + booking.getFfncc().getFfcc() + "</p>");
-                for (Ticket ticket : booking.getTickets()) {
-                    out.println("<p><strong>Passengers: </strong> </p> <ul>");
-                    out.println("<li>" + ticket.getPassenger().getFirstName() + " " + ticket.getPassenger().getLastName() + "</li>");
-                    out.println("</ul>");
-                }
-                FlightRoute flightroute = booking.getFlightRoute();
-                for (Flight flight : flightroute.getFlights()) {
-                    out.println("<p><strong>Flight: </strong></p> <ul>");
-                    out.println("<li><strong>Airplane: </strong>" + flight.getAirplane().getIata() + "</li>");
-                    out.println("<li><strong>Departure: </strong> " + flight.getDepAirport().getName() + ", " + flight.getDepDate() + "</li>");
-                    out.println("<li><strong>Arrival: </strong>" + flight.getArrAirport().getName() + ", " + flight.getArrDate() + "</li>");
-                    out.println("</ul>");
-                }
-                out.println("<p><strong>Price: </strong>" + booking.getPrice() + "</p>");
-                out.println("<form action='PnrLookUpServlet' id='pnrservlet' method='delete' ><button type='button' onClick='verify()' class='w3-button w3-border w3-red'><strong>Cancel booking</strong></button></form>");
-                out.println("</div>");
+    <%
+        session = request.getSession();
+        Booking booking = booking = (Booking) session.getAttribute("booking");
+        if (booking == null) {
+            out.println("<div class='w3-margin-top m2'> <p>Please fill in a PNR that exists</p> </div>");
+        } else {
+            out.println("<div class='w3-margin-top m2'>");
+            out.println("<input id='pnrtag' type='hidden' value='"+ booking.getPnr().getPnr() +"'/>");
+            out.println("<p ><strong>PNR: </strong>" + booking.getPnr().getPnr() + "</p><p>&emsp;&emsp;&emsp; <strong> FFNCC: </strong> " + booking.getFfncc().getFfcc() + "</p>");
+            for (Ticket ticket : booking.getTickets()) {
+                out.println("<p><strong>Passengers: </strong> </p> <ul>");
+                out.println("<li>" + ticket.getPassenger().getFirstName() + " " + ticket.getPassenger().getLastName() + "</li>");
+                out.println("</ul>");
             }
-        %>
-    </div>
+            FlightRoute flightroute = booking.getFlightRoute();
+            for (Flight flight : flightroute.getFlights()) {
+                out.println("<p><strong>Flight: </strong></p> <ul>");
+                out.println("<li><strong>Airplane: </strong>" + flight.getAirplane().getIata() + "</li>");
+                out.println("<li><strong>Departure: </strong> " + flight.getDepAirport().getName() + ", " + flight.getDepDate() + "</li>");
+                out.println("<li><strong>Arrival: </strong>" + flight.getArrAirport().getName() + ", " + flight.getArrDate() + "</li>");
+                out.println("</ul>");
+            }
+            out.println("<p><strong>Price: </strong>" + booking.getPrice() + "</p>");
+            out.println("<form action='PnrLookUpServlet' id='pnrservlet' method='delete' ><button type='button' onClick='verify()' class='w3-button w3-border w3-red'><strong>Cancel booking</strong></button></form>");
+            out.println("</div>");
+        }
+    %>
+</div>
 </div>
 <script>
     function verify() {
